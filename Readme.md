@@ -1,4 +1,4 @@
 
 # Giovanny Mena D
 
-Bienvenido a mi portafolio online.
+Bienvenido a mi portafolio web.
