@@ -557,7 +557,7 @@ PANTALLA DE MEDIUM DEVICES - MEDIUM (md) - revisamos en tablet horizontal 1024px
     #v_review_d{
         display: grid !important;
         justify-content: flex-start;
-        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-columns: 2fr 4fr 1fr;
         grid-template-rows: 0.7fr;
     }
 
