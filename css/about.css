@@ -553,7 +553,7 @@ PANTALLA DE TABLETS SMALL (sm) - revisamos en tablet vertical 768px
 @media(max-width:991px) and (min-width:768px){
 
     section .contenedor .fila{
-        height:2608px !important;
+        height:2516px !important;
     }
 
     #about{
@@ -710,13 +710,9 @@ PANTALLA DE PHONES - EXTRA SMALL (xs) - revisamos en movil desde 425px para arri
 
     section .contenedor .fila{
         top:76px !important;
-        height:3028px !important;
+        height:2484px !important;
     }
 
-    #about{
-    position:relative;
-    top:560px;
-   }
 
    h4{
     padding-top:40px !important;
@@ -851,13 +847,9 @@ PANTALLA DE PHONES - SMALL (s) - revisamos en movil horizontal 375px o vertical 
 
     section .contenedor .fila{
         top:76px !important;
-        height:3050px !important;
+        height:2554px !important;
     }
 
-    #about{
-    position:relative;
-    top:490px;
-   }
 
    h4{
     padding-top:40px !important;
@@ -993,13 +985,9 @@ PANTALLA DE PHONES - SMALL (s) - revisamos en movil vertical 320px
 
     section .contenedor .fila{
         top:76px !important;
-        height:3154px !important;
+        height:2720px !important;
     }
 
-    #about{
-    position:relative;
-    top:430px;
-   }
 
    h4{
     padding-top:40px !important;
