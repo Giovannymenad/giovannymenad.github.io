@@ -553,9 +553,6 @@ PANTALLA DE TABLETS SMALL (sm) - revisamos en tablet vertical 768px
 @media(max-width:991px) and (min-width:768px){
 
 
-    /*section .contenedor .fila{
-        height:2608px !important;
-    }*/
 
     #about{
     position:relative;
