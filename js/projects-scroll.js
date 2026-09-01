@@ -42,11 +42,11 @@ mm.add({
   } 
   else if (isMobileMedium) { // <= 375px
     gap = 10;
-    extraSpace = 208; 
+    extraSpace = 104; 
   } 
   else if (isMobileSmall) { // <= 320px
     gap = 4;
-    extraSpace = 280; 
+    extraSpace = 140; 
   }
 
   const step = cardHeight + gap;

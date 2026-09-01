@@ -338,7 +338,6 @@ button {
 
     box-sizing:border-box;
 
-
     border-radius:6px;
 
     font-family:"IBM Plex Sans",sans-serif;
@@ -1474,7 +1473,7 @@ line-height: 24px;
 /*==================================================
 MOBILE L
 ==================================================*/
-@media (max-width:428px){
+@media (max-width:480px){
 
 
 
