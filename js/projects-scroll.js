@@ -34,7 +34,7 @@ mm.add({
   } 
   else if (isTabletPort) { // <= 768px
     gap = 30; // Puedes ajustar este espacio entre tarjetas para tablet
-    extraSpace = 284; 
+    extraSpace = 264; 
   } 
   else if (isMobileLarge) { // <= 425px
     gap = 20; // Espacio más pequeño para móviles grandes
