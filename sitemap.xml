@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- 00. PÁGINA DE INICIO -->
+    <url>
+        <loc>https://giovannymenad.github.io/</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- 01. PROYECTO: STREAM TAP -->
+    <url>
+        <loc>https://giovannymenad.github.io/projects/stream-tap/index.html</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- 02. PROYECTO: VITIO -->
+    <url>
+        <loc>https://giovannymenad.github.io/informative/index.html</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- 03. CONOCE MI TRAYECTORIA -->
+    <url>
+        <loc>https://giovannymenad.github.io/about/index.html</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
