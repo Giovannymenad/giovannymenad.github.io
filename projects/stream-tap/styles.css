@@ -5589,7 +5589,7 @@ LINEA & PUNTO FINAL
 
     padding:0;
 
-    border:1px solid rgba(236,245,254,.20);
+    border:1px solid rgba(236,245,254,.40);
 
     border-radius:50%;
 
@@ -12815,7 +12815,7 @@ APRENDIZAJES
     }
 
 
-    
+
     .case-index.is-open {
     opacity: 1;
     visibility: visible;
