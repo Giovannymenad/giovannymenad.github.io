@@ -38,7 +38,7 @@ mm.add({
   } 
   else if (isMobileLarge) { // <= 425px
     gap = 20; // Espacio más pequeño para móviles grandes
-    extraSpace = 180; 
+    extraSpace = 100; 
   } 
   else if (isMobileMedium) { // <= 375px
     gap = 10;
