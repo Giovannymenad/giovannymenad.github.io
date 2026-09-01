@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Configuración básica -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--googleverify-->
+        <meta name="google-site-verification" content="j9BOzgZmOnAtVju0XWyqt6bPBAK3TbspPAwr55cRJZA"/>
+        
+        <!-- Título -->
+        <title>Stream Tap · Case Study</title>
+
+        <style>
+            /* Bloquea la selección visual de texto e imágenes */
+        body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        img {
+         -webkit-user-drag: none;
+         pointer-events: none;
+        }
+        </style>
+        
+        <!-- Descripción para SEO -->
+        <meta name="description" content="Caso de estudio de Stream Tap: análisis UX y Product Design de una herramienta para controlar OBS Studio durante transmisiones en vivo, basado en investigación, arquitectura de información, evaluación y validación.">
+
+        <!-- Open Graph (para que se vea bien al compartir en redes -->
+
+<meta property="og:title" content="Giovanny Mena - Diseñador UX/UI & Creativo Digital">
+<meta property="og:description" content="Creo proyectos digitales que combinan usabilidad, diseño UX/UI y branding para experiencias memorables.">
+<meta property="og:image" content="https://giovannymenad.github.io../../assets/preview.png"> <!-- aquí va la URL de tu imagen -->
+<meta property="og:url" content="https://giovannymenad.github.io">
+<meta property="og:type" content="website">
+
+         <!-- Favicon SVG (principal para navegadores modernos y Google) -->
+        <link rel="icon" href="../../assets/Favicon-gmd.svg" type="image/svg+xml">
+
+        <!-- Favicon PNG (512px para Safari iOS y fallback general) -->
+         <link rel="icon" href="../../assets/Favicon-gmd.png" sizes="512x512" type="image/png">
+
+        <!-- Apple Touch Icon (para iOS) -->
+          <link rel="apple-touch-icon" href="../../assets/Favicon-gmd.png">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Autor -->
+    <meta name="author" content="Giovanny Mena D">
+
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+
+                <!-- Logo -->
+                <a class="header__logo" href="../../index.html">
+                    <img src="../../assets/logo/logo-giovanny-mena.png" alt="logo giovanny mena d">
+                </a>
+
+                 <!-- Botón hamburguesa -->
+                 <button class="header__toggle"
+                  id="hamburger-btn"
+                  aria-label="Abrir menú"
+                  aria-expanded="false"
+                  aria-controls="header-menu">
+
+                 <span></span>
+                 <span></span>
+                 <span></span>
+
+</button>
+
+                <!-- Navigation -->
+                 <ul class="header__menu" id="header-menu">
+
+                    <li class="header__item">
+
+                        <a class="header__link" href="../../index.html">Inicio</a>
+
+                    </li>
+
+                    <li class="header__item">
+
+                        <a class="header__link active" href="index.html">Stream Tap</a>
+
+                    </li>
+
+                    <li class="header__item">
+
+                        <a class="header__link" href="../../../about/index.html">Conoce mi trayectoria</a>
+
+                    </li>
+                    
+                 </ul>
+            </nav>
+        </div>
+    </header>
+
+
+  <!-- ==================================================
+     FLOATING INDEX BUTTON
+================================================== -->
+
+<button
+    class="case-index-toggle"
+    type="button"
+    aria-label="Abrir índice"
+    aria-expanded="false">
+
+    <img
+        class="case-index-toggle__icon"
+        src="../../assets/icons/logo-footer.svg"
+        alt="">
+
+    <span class="case-index-toggle__label">
+        Índice
+    </span>
+
+</button>
+
+
+<!-- PANEL DEL ÍNDICE -->
+    <nav
+        class="case-index"
+        aria-label="Índice del case study">
+
+        <div class="case-index__header">
+
+            <span class="case-index__title">
+                Índice
+            </span>
+
+            <button
+                class="case-index__close"
+                type="button"
+                aria-label="Cerrar índice">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <ol class="case-index__list">
+
+            <li>
+                <a href="#hero">
+                    Stream Tap
+                </a>
+            </li>
+
+            <li>
+                <a href="#el-problema">
+                    El problema
+                </a>
+            </li>
+
+             <li>
+                <a href="#comprension-problema">
+                    Comprension del problema
+                </a>
+            </li>
+
+            <li>
+                <a href="#investigacion-hallazgos">
+                    Investigación &amp; hallazgos
+                </a>
+            </li>
+
+            <li>
+                <a href="#matriz-impacto-esfuerzo">
+                    Matriz Impacto vs. Esfuerzo
+                </a>
+            </li>
+
+            <li>
+                <a href="#auditoria-flujo-actual">
+                    Auditoría del Flujo Actual
+                </a>
+            </li>
+
+            <li>
+                <a href="#arquitectura-informacion">
+                    Análisis de la Arquitectura de Información
+                </a>
+            </li>
+
+            <li>
+                <a href="#oportunidades-evolucion">
+                    Oportunidades de evolución
+                </a>
+            </li>
+
+            <li>
+                <a href="#plan-evaluacion">
+                    Plan de evaluación
+                </a>
+            </li>
+
+            <li>
+                <a href="#plan-validacion">
+                    Plan de validación
+                </a>
+            </li>
+
+            <li>
+                <a href="#aprendizajes-proyecto">
+                    Aprendizajes del proyecto
+                </a>
+            </li>
+
+        </ol>
+
+    </nav>
+
+
+    <main>
+
+        <!-- CASE STUDY STREAM TAP -->
+
+    <!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="case-hero" id="hero">
+
+    <div class="container">
+
+        <div class="case-hero__content">
+
+            <div class="case-hero__main">
+
+                <h1 class="case-hero__title">
+                    Stream Tap
+                </h1>
+
+                <p class="case-hero__description">
+
+                    Controla OBS Studio de forma remota y mantén
+                    la atención en tu transmisión, sin interrumpir
+                    tu flujo de trabajo.
+
+                </p>
+
+
+                <div class="case-hero__google-play">
+
+    <span class="case-hero__google-play-label">
+        Disponible en
+    </span>
+
+    <a
+        class="case-hero__google-play-link"
+        href="https://play.google.com/store/apps/details?id=com.rickesk.streamtap&hl=es_EC"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+            src="../../assets/icons/google-play.svg"
+            alt="">
+
+        <span>
+            Google Play
+        </span>
+
+
+    </a>
+
+                 </div>
+
+
+                <ul class="case-hero__tags">
+
+                    <li>Product Thinking</li>
+
+                    <li>UX/UI</li>
+
+                    <li>Research</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="case-hero__visual">
+
+            <video
+            src="../../assets/images/stream-tap-animation.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata">
+
+            </video>
+
+            </div>
+
+
+
+            <div class="case-hero__info">
+
+                <p class="case-hero__product">
+
+                    Stream Tap es una aplicación Android publicada en Google Play que permite gestionar escenas y atajos de OBS Studio desde un dispositivo móvil.
+
+                    <br><br>Aunque Stream Tap ya se encontraba publicado, este caso de estudio reconstruye el análisis del producto desde una perspectiva de UX y Product Design para identificar el problema que resuelve, analizar las decisiones presentes en la experiencia y proponer oportunidades de evolución fundamentadas en metodologías centradas en el usuario.
+
+                </p>
+
+
+                <div class="case-hero__contribution">
+
+                    <h2 class="case-hero__contribution-title">
+                        Mi contribución
+                    </h2>
+
+                    <p class="case-hero__contribution-role">
+                        Producto desarrollado por
+                    </p>
+
+                    <p class="case-hero__developer">
+                        Análisis UX
+                    </p>
+
+                    <a
+                     class="case-hero__developer-name"
+                     href="https://stkngesk.tech/"
+                     target="_blank"
+                     rel="noopener noreferrer">
+
+                    Christian Mena · Full Stack Developer
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ==================================================
+     EL PROBLEMA
+================================================== -->
+
+<section class="case-problem" id="el-problema">
+
+    <div class="container">
+
+        <div class="case-problem__content">
+
+            <div class="case-problem__visual">
+
+                <img
+                    src="../../assets/images/jametlene-reskp-HJljK-svzBQ-unsplash.jpg"
+                    alt="">
+
+                <p class="case-problem__caption">
+
+                    El verdadero desafío no era controlar OBS Studio,
+                    sino permitir que el streamer mantuviera su atención
+                    en la transmisión mientras ejecutaba acciones críticas.
+
+                </p>
+
+            </div>
+
+
+            <div class="case-problem__text">
+
+                <h2 class="case-problem__title">
+                    El problema
+                </h2>
+
+                <span class="case-problem__subtitle">
+                    Hipótesis de Investigación
+                </span>
+
+
+                <p>
+                    Durante una transmisión en vivo, los creadores de
+                    contenido deben cambiar escenas, ejecutar atajos y
+                    controlar diferentes funciones de OBS Studio sin
+                    interrumpir su interacción con la audiencia.
+                </p>
+
+                <p>
+                    Cuando estas acciones dependen del teclado o del mouse,
+                    el usuario debe desviar constantemente su atención de la
+                    transmisión, aumentando el esfuerzo cognitivo y el riesgo
+                    de cometer errores durante momentos críticos.
+                </p>
+
+                <p>
+                    <strong>Stream Tap</strong> surge para facilitar este
+                    proceso mediante un centro de control móvil que permite
+                    ejecutar acciones de OBS Studio de forma remota,
+                    manteniendo el foco en la transmisión.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ==================================================
+     COMPRENSIÓN DEL PROBLEMA
+================================================== -->
+
+<section class="case-understanding" id="comprension-problema">
+
+    <div class="container">
+
+        <div class="case-understanding__content">
+
+
+            <!-- ==================================================
+                 TEXT
+            =================================================== -->
+
+            <div class="case-understanding__text">
+
+                <h2 class="case-understanding__title">
+                    Comprensión<br>
+                    del problema
+                </h2>
+
+                <span class="case-understanding__subtitle">
+                    ¿Cómo llegué a esta conclusión?
+                </span>
+
+
+                <p>
+                    Antes de proponer cualquier oportunidad de mejora,
+                    fue necesario comprender qué necesidad buscaba
+                    resolver Stream Tap y desde qué contexto operativo
+                    la experimentaba el usuario.
+                </p>
+
+
+                <p class="case-understanding__caption">
+
+                    El JTBD definió la necesidad funcional del producto,
+                    mientras que el Point of View permitió comprender
+                    el contexto operativo y emocional del usuario. A partir
+                    de esta comprensión se inició la investigación para
+                    identificar los principales factores que influían
+                    en la experiencia durante una transmisión en vivo.
+
+                </p>
+
+            </div>
+
+
+            <!-- ==================================================
+                 CARDS
+            =================================================== -->
+
+            <div class="case-understanding__cards">
+
+
+                <article class="case-understanding__card">
+
+                    <h3>
+                        Job to Be Done
+                    </h3>
+
+                    <p>
+                        Reducir el esfuerzo cognitivo de controlar OBS Studio
+                        durante transmisiones en vivo para creadores que
+                        producen contenido sin asistencia técnica.
+                    </p>
+
+                </article>
+
+
+                <article class="case-understanding__card">
+
+                    <h3>
+                        Point of View
+                    </h3>
+
+                    <p>
+                        @Kathe CC necesita gestionar OBS Studio sin desviar su atención de la transmisión, porque cualquier interrupción puede afectar la experiencia de su audiencia y su confianza durante el directo.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+     INVESTIGACIÓN & HALLAZGOS
+================================================== -->
+
+<section class="case-research" id="investigacion-hallazgos">
+
+    <div class="container">
+
+        <div class="case-research__content">
+
+
+            <!-- ==================================================
+                 INTRO
+            =================================================== -->
+
+            <div class="case-research__visual">
+
+                <img
+                    src="../../assets/images/mykhaylo-kopyt-fGrb35rHPCQ-unsplash.jpg"
+                    alt="Investigación sobre experiencias de streamers durante transmisiones en vivo">
+
+            </div>
+
+
+            <div class="case-research__text">
+
+                <h2 class="case-research__title">
+
+                    Investigación<br>
+                    &amp; hallazgos
+
+                </h2>
+
+                <span class="case-research__subtitle">
+
+                    Desk Research
+
+                </span>
+
+
+                <p>
+
+                    Para comprender el contexto de uso de
+                    <em>Stream Tap</em>, realicé una investigación
+                    documental centrada en experiencias compartidas
+                    por streamers y creadores de contenido que utilizan
+                    OBS Studio.
+
+                </p>
+
+
+                <p>
+
+                    El objetivo fue identificar patrones de comportamiento,
+                    comprender las principales dificultades durante una
+                    transmisión en vivo y fundamentar las decisiones
+                    posteriores mediante evidencia cualitativa.
+
+                </p>
+
+            </div>
+
+
+            <!-- ==================================================
+                 FINDINGS
+            =================================================== -->
+
+            <div class="case-research__findings">
+
+
+                <article class="case-research__card">
+
+                    <h3>
+                        Operación durante la transmisión
+                    </h3>
+
+                    <span>
+                        Trigger
+                    </span>
+
+                    <p>
+
+                        Durante una transmisión en vivo, los streamers
+                        necesitan ejecutar acciones sin desviar su atención
+                        del contenido ni de la interacción con su audiencia.
+
+                    </p>
+
+                    <span>
+                        Insight
+                    </span>
+
+                    <p>
+
+                        Cambiar constantemente entre OBS Studio y la
+                        transmisión interrumpe el flujo de trabajo y aumenta
+                        la carga operativa en momentos donde la rapidez
+                        es crítica.
+
+                    </p>
+
+                </article>
+
+
+                <article class="case-research__card">
+
+                    <h3>
+                        Acceso inmediato a funciones críticas
+                    </h3>
+
+                    <span>
+                        Trigger
+                    </span>
+
+                    <p>
+
+                        Las acciones utilizadas con mayor frecuencia deben
+                        permanecer disponibles en todo momento durante
+                        la transmisión.
+
+                    </p>
+
+                    <span>
+                        Insight
+                    </span>
+
+                    <p>
+
+                        Priorizar el acceso inmediato a escenas y atajos
+                        permite responder rápidamente a situaciones en vivo
+                        y reduce el tiempo necesario para ejecutar acciones
+                        críticas.
+
+                    </p>
+
+                </article>
+
+
+                <article class="case-research__card">
+
+                    <h3>
+                        Reducción de la carga cognitiva
+                    </h3>
+
+                    <span>
+                        Trigger
+                    </span>
+
+                    <p>
+
+                        Durante una transmisión, recordar configuraciones,
+                        cambiar de contexto o buscar controles incrementa
+                        el esfuerzo necesario para operar el software.
+
+                    </p>
+
+                    <span>
+                        Insight
+                    </span>
+
+                    <p>
+
+                        Los streamers adoptan herramientas externas no por
+                        preferencia tecnológica, sino porque les permiten
+                        reducir la carga mental y recuperar la sensación
+                        de control durante la transmisión.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- ==================================================
+                 VOCES DE LA COMUNIDAD
+            =================================================== -->
+
+            <div class="case-research__community">
+
+                <h3 class="case-research__community-title">
+
+                    Voces de la comunidad
+
+                </h3>
+
+
+                <div class="case-research__community-grid">
+
+
+                    <article class="case-research__quote-card">
+
+                        <h4>
+                            obsproject.com/forum/
+                        </h4>
+
+                        <p>
+
+                            Las teclas rápidas no funcionan correctamente.
+                            <br>¿Hay algún truco para usar atajos? El problema
+                            es que estas teclas rápidas solo funcionan cuando
+                            hago clic en la ventana de vista previa de OBS Studio.
+
+                        </p>
+
+                        <strong>
+                            Operación durante la transmisión
+                        </strong>
+
+                    </article>
+
+
+                    <article class="case-research__quote-card">
+
+                        <h4>
+                            reddit.com/r/obs/
+                        </h4>
+
+                        <p>
+
+                            Tengo un Stream Deck. Quiero saber cómo
+                            programarlo para cambiar elementos o escenas
+                            que se están transmitiendo a través de la
+                            cámara virtual en otra aplicación, sin salir
+                            de la escena activa de Twitch que estoy transmitiendo.
+
+                        </p>
+
+                        <strong>
+                            Acceso inmediato a funciones críticas
+                        </strong>
+
+                    </article>
+
+
+                    <article class="case-research__quote-card">
+
+                        <h4>
+                            reddit.com/r/obs_scene_switching
+                        </h4>
+
+                        <p>
+
+                            Hola, tengo un problema con OBS. Por alguna razón,
+                            incluso cuando estoy grabando solo la pantalla o
+                            usando la cámara virtual, las escenas se cambian
+                            solas después de un rato.
+
+                        </p>
+
+                        <strong>
+                            Reducción de la carga cognitiva
+                        </strong>
+
+                    </article>
+
+
+                </div>
+
+
+                <p class="case-research__conclusion">
+
+                    Los hallazgos obtenidos permitieron comprender las
+                    principales necesidades del contexto de uso de Stream Tap.
+                    A partir de esta evidencia, se priorizaron las oportunidades
+                    con mayor potencial de impacto para orientar el análisis
+                    de las siguientes etapas del producto.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+  <!-- ==================================================
+     MATRIZ IMPACTO VS. ESFUERZO
+================================================== -->
+
+<section class="case-priority" id="matriz-impacto-esfuerzo">
+
+    <div class="container">
+
+        <div class="case-priority__content">
+
+            <div class="case-priority__intro">
+
+                <h2 class="case-priority__title">
+                    Matriz Impacto<br>
+                    vs. Esfuerzo
+                </h2>
+
+                <span class="case-priority__subtitle">
+                    Priorización de oportunidades
+                </span>
+
+                <p class="case-priority__description">
+
+                    A partir de los hallazgos obtenidos durante la investigación,
+                    se priorizaron las oportunidades de mejora según su impacto
+                    potencial para el usuario y el esfuerzo estimado de
+                    implementación.
+
+                </p>
+
+                <p class="case-priority__description">
+
+                    Este ejercicio permitió identificar qué iniciativas aportarían
+                    mayor valor al producto antes de plantear futuras iteraciones.
+
+                </p>
+
+            </div>
+
+            
+            <div class="case-priority__matrix">
+
+                <div class="case-priority__axis-y">
+                     Impacto
+                </div>
+
+                <div class="case-priority__axis-x">
+                    Esfuerzo
+                </div>
+
+
+                <div class="case-priority__quadrant
+                            case-priority__quadrant--high-low">
+
+                    <h3>
+                        Alto Impacto + Bajo Esfuerzo
+                    </h3>
+
+                    <span>
+                        Implementación prioritaria
+                    </span>
+
+                    <ul>
+
+                        <li class="priority_implementation">Conexión IP/WebSocket.</li>
+
+                        <li>Sin Login.</li>
+
+                        <li>Gestión de Escenas.</li>
+
+                        <li>Configuración de Hotkeys.</li>
+
+                        <li>Personalización de Controles.</li>
+
+                        <li>Categorización de Atajos.</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="case-priority__quadrant
+                            case-priority__quadrant--high-high">
+
+                    <h3>
+                        Alto Impacto + Alto Esfuerzo
+                    </h3>
+
+                    <span>
+                        Muy valioso, pero caro.
+                    </span>
+
+                    <ul>
+
+                        <li class="valuable_but_expensive">Reordenamiento Drag &amp; Drop.</li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <div class="case-priority__quadrant
+                            case-priority__quadrant--low-low">
+
+
+                    <ul>
+
+                        <li>Vertical / Horizontal.</li>
+
+                        <li class="optional">Multilenguaje</li>
+
+                    </ul>
+
+                    <h3>
+                        Bajo Impacto + Bajo Esfuerzo
+                    </h3>
+
+                     <span>
+                        Opcional.
+                    </span>
+
+                </div>
+
+
+                <div class="case-priority__quadrant
+                            case-priority__quadrant--low-high">
+
+                    <ul>
+                        <li class="avoid">Sin anuncios Pro.</li>
+                    </ul>
+
+                    <h3>
+                        Bajo Impacto + Alto Esfuerzo
+                    </h3>
+
+                    <span>
+                        Normalmente se evita.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="case-priority__priorities">
+
+                <h2 class="case-priority__priorities-title">
+                    Prioridades identificadas
+                </h2>
+
+
+                <div class="case-priority__cards">
+
+
+                    <article class="case-priority__card">
+
+                        <h3>
+                            01 | Funciones esenciales para la operación
+                        </h3>
+
+                        <p>
+
+                            Las funcionalidades relacionadas con la conexión a
+                            OBS Studio, la gestión de escenas y la configuración
+                            de atajos fueron priorizadas por su impacto directo
+                            en la operación durante una transmisión y por su bajo
+                            esfuerzo estimado de implementación.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="case-priority__card">
+
+                        <h3>
+                            02 | Personalización de los controles
+                        </h3>
+
+                        <p>
+
+                            La posibilidad de personalizar controles y organizar
+                            atajos mediante categorías fue considerada una mejora
+                            de alto valor para favorecer el reconocimiento visual
+                            y adaptar la interfaz a las necesidades de cada streamer.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="case-priority__card">
+
+                        <h3>
+                            03 | Funcionalidades de evolución
+                        </h3>
+
+                        <p>
+
+                            Características como el reordenamiento mediante
+                            Drag &amp; Drop fueron identificadas como mejoras de
+                            alto impacto, aunque con un mayor esfuerzo de desarrollo,
+                            por lo que representan oportunidades para futuras
+                            iteraciones del producto.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <p class="case-priority__caption">
+
+                    La matriz permitió identificar qué funcionalidades aportan
+                    mayor valor al usuario según su impacto y esfuerzo estimado.
+                    Esta priorización sirvió como punto de partida para analizar
+                    con mayor profundidad el flujo actual del producto e identificar
+                    las principales oportunidades de mejora.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     AUDITORÍA DEL FLUJO ACTUAL
+================================================== -->
+
+<section class="case-audit" id="auditoria-flujo-actual">
+
+    <div class="container">
+
+        <div class="case-audit__content">
+
+            <!-- ==================================================
+                 HEADER
+            ================================================== -->
+
+            <div class="case-audit__intro">
+
+                <figure class="case-audit__intro-visual">
+
+                    <img
+                        src="../../assets/images/compagnons-c-unsplash.jpg"
+                        alt="Análisis del flujo actual de Stream Tap">
+
+                </figure>
+
+
+                <div class="case-audit__intro-text">
+
+                    <h2 class="case-audit__title">
+                        Auditoría del<br>
+                        Flujo Actual
+                    </h2>
+
+                    <span class="case-audit__subtitle">
+                        Análisis del recorrido
+                    </span>
+
+                    <p>
+                        Con las oportunidades priorizadas, el siguiente paso consistió en
+                        analizar el flujo actual de Stream Tap para comprender cómo los
+                        usuarios interactúan con el producto e identificar los principales
+                        puntos de fricción presentes durante las tareas más importantes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 FLUJO 01
+            ================================================== -->
+
+            <article class="case-audit__flow">
+
+                <header class="case-audit__flow-header">
+
+                    <h3>
+                        01 | Conexión con OBS Studio
+                    </h3>
+
+                </header>
+
+
+                <div class="case-audit__flow-main">
+
+                    <div class="case-audit__journey">
+
+                        <div class="case-audit__step">
+                            Usuario abre Stream Tap
+                        </div>
+
+                        <div class="case-audit__step">
+                            Selecciona “Conectar a OBS”
+                        </div>
+
+                        <div class="case-audit__step">
+                            Elige conexión manual o código QR
+                        </div>
+
+                        <div class="case-audit__step">
+                            Ingresa los datos de conexión o escanea el código
+                        </div>
+
+                        <div class="case-audit__step">
+                            Establece la conexión con OBS Studio
+                        </div>
+
+                    </div>
+
+
+                    <figure class="case-audit__screen">
+
+                        <img
+                            src="../../assets/screens/screen_obs_connect.png"
+                            alt="Pantalla actual de conexión con OBS Studio">
+
+                        <figcaption>
+                            Pantalla actual
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+
+                <div class="case-audit__frictions">
+
+                    <div class="case-audit__frictions-header">
+
+                        <h4>
+                            Principales puntos de fricción
+                        </h4>
+
+                        <div class="case-audit__legend">
+
+                            <span class="is-high">
+                                ● Alto
+                            </span>
+
+                            <span class="is-medium">
+                                ● Medio
+                            </span>
+
+                            <span class="is-low">
+                                ● Bajo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="case-audit__friction is-high">
+
+                        <h5>
+                            Dependencia externa para conexión
+                        </h5>
+
+                        <span>
+                            Carga cognitiva por dependencia externa.
+                        </span>
+
+                        <p>
+                            El usuario debe salir de la app, buscar datos técnicos en OBS
+                            Studio, recordarlos o copiarlos y regresar para completar la
+                            conexión. Este cambio de contexto incrementa el esfuerzo
+                            necesario para iniciar el uso del producto.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tasa de éxito de conexión</li>
+                            <li>Tiempo para completar la conexión</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="case-audit__friction is-medium">
+
+                        <h5>
+                            Posible baja encontrabilidad
+                        </h5>
+
+                        <span>
+                            Baja encontrabilidad automática (significantes débiles).
+                        </span>
+
+                        <p>
+                            El usuario nuevo podría no identificar inmediatamente la
+                            función del icono de conexión, por lo que requiere una guía
+                            contextual para descubrir la acción.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tiempo para encontrar la función</li>
+                            <li>Errores de navegación</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="case-audit__friction is-medium">
+
+                        <h5>
+                            Visibilidad del CTA principal
+                        </h5>
+
+                        <span>
+                            Riesgo de “Falso Suelo” (baja encontrabilidad).
+                        </span>
+
+                        <p>
+                            Si la acción principal no aparece inmediatamente en el área
+                            visible inicial (<i>above the fold</i>), el usuario puede requerir
+                            exploración adicional antes de completar la tarea.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tiempo de configuración</li>
+                            <li>Errores de navegación</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 FLUJO 02
+            ================================================== -->
+
+            <article class="case-audit__flow">
+
+                <header class="case-audit__flow-header">
+
+                    <h3>
+                        02 | Crear un nuevo atajo
+                    </h3>
+
+                </header>
+
+
+                <div class="case-audit__flow-main">
+
+                    <div class="case-audit__journey">
+
+                        <div class="case-audit__step">
+                            Usuario accede al módulo de Atajos
+                        </div>
+
+                        <div class="case-audit__step">
+                            Selecciona “Añadir atajo”
+                        </div>
+
+                        <div class="case-audit__step">
+                            Configura nombre y categoría
+                        </div>
+
+                        <div class="case-audit__step">
+                            Asigna la combinación de teclas
+                        </div>
+
+                        <div class="case-audit__step">
+                            Guarda el nuevo atajo
+                        </div>
+
+                    </div>
+
+
+                    <figure class="case-audit__screen">
+
+                        <img
+                            src="../../assets/screens/screen_create_shortcut.png"
+                            alt="Pantalla actual de creación de atajos">
+
+                        <figcaption>
+                            Pantalla actual
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+
+                <div class="case-audit__frictions">
+
+                    <div class="case-audit__frictions-header">
+
+                        <h4>
+                            Principales puntos de fricción
+                        </h4>
+
+                    </div>
+
+
+                    <article class="case-audit__friction is-medium">
+
+                        <h5>
+                            Riesgo de baja claridad en la organización de controles
+                        </h5>
+
+                        <span>
+                            Organización del contenido / Reconocimiento sobre memoria.
+                        </span>
+
+                        <p>
+                            El usuario debe decidir cómo nombrar y categorizar sus controles
+                            antes de utilizarlos durante una transmisión. Una organización
+                            poco representativa puede dificultar su localización posterior.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tiempo para encontrar un control</li>
+                            <li>Errores de navegación</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="case-audit__friction is-medium">
+
+                        <h5>
+                            Dependencia del modelo mental externo
+                        </h5>
+
+                        <span>
+                            Dependencia del modelo mental externo.
+                        </span>
+
+                        <p>
+                            El usuario debe asociar una acción dentro de Stream Tap con una
+                            combinación previamente configurada en OBS Studio.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tasa de éxito de configuración</li>
+                            <li>Tiempo de configuración</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="case-audit__friction is-low">
+
+                        <h5>
+                            Falta de confirmación clara después de guardar
+                        </h5>
+
+                        <span>
+                            Visibilidad del estado del sistema.
+                        </span>
+
+                        <p>
+                            Después de crear un atajo, el usuario necesita confirmar
+                            rápidamente que la acción fue registrada correctamente y estará
+                            disponible durante la transmisión.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tasa de éxito de creación</li>
+                            <li>Errores durante la configuración</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 FLUJO 03
+            ================================================== -->
+
+            <article class="case-audit__flow">
+
+                <header class="case-audit__flow-header">
+
+                    <h3>
+                        03 Gestionar escenas | Recorrido del usuario
+                    </h3>
+
+                </header>
+
+
+                <div class="case-audit__flow-main">
+
+                    <div class="case-audit__journey">
+
+                        <div class="case-audit__step">
+                            Usuario visualiza las escenas disponibles
+                        </div>
+
+                        <div class="case-audit__step">
+                            Selecciona una escena
+                        </div>
+
+                        <div class="case-audit__step">
+                            Edita nombre o color o elimina la escena
+                        </div>
+
+                        <div class="case-audit__step">
+                            Guarda los cambios
+                        </div>
+
+                    </div>
+
+
+                    <figure class="case-audit__screen">
+
+                        <img
+                            src="../../assets/screens/screen_manage_scene_.png"
+                            alt="Pantalla actual de gestión de escenas">
+
+                        <figcaption>
+                            Pantalla actual
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+
+                <div class="case-audit__frictions">
+
+                    <div class="case-audit__frictions-header">
+
+                        <h4>
+                            Principales puntos de fricción
+                        </h4>
+
+                    </div>
+
+
+                    <article class="case-audit__friction is-medium">
+
+                        <h5>
+                            Identificación rápida bajo presión temporal
+                        </h5>
+
+                        <span>
+                            Carga cognitiva durante operación en vivo.
+                        </span>
+
+                        <p>
+                            Durante una transmisión, el usuario necesita reconocer
+                            rápidamente la escena correcta sin perder atención sobre el
+                            contenido y la audiencia. Aunque Stream Tap permite personalizar
+                            nombres y colores, la selección sigue dependiendo de una
+                            organización previa.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tiempo promedio para cambiar escenas</li>
+                            <li>Tasa de éxito de selección</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="case-audit__friction is-medium">
+
+                        <h5>
+                            Incertidumbre sobre cambios aplicados
+                        </h5>
+
+                        <span>
+                            Feedback y control del sistema.
+                        </span>
+
+                        <p>
+                            Cuando el usuario modifica una escena, necesita confirmar que
+                            los cambios afectan correctamente la forma en que identificará
+                            ese control durante la transmisión.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Errores de configuración</li>
+                            <li>Tiempo de edición</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="case-audit__friction is-low">
+
+                        <h5>
+                            Riesgo de eliminación accidental
+                        </h5>
+
+                        <span>
+                            Prevención de errores.
+                        </span>
+
+                        <p>
+                            Eliminar una escena puede afectar la organización del panel de
+                            control, por lo que el usuario podría necesitar una confirmación
+                            antes de completar la acción.
+                        </p>
+
+                        <strong>
+                            KPI relacionado
+                        </strong>
+
+                        <ul>
+                            <li>Tasa de errores</li>
+                            <li>Acciones reversibles o canceladas</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 CONCLUSION
+            ================================================== -->
+
+            <p class="case-audit__caption">
+
+                La auditoría permitió identificar cómo la organización actual del producto
+                influye en la experiencia del usuario y evidenció oportunidades para
+                comprender mejor su estructura funcional. A partir de este análisis, la
+                siguiente etapa documenta la arquitectura de información del producto y
+                explica cómo está organizada para responder a las necesidades identificadas
+                durante la investigación.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ANÁLISIS DE LA ARQUITECTURA DE INFORMACIÓN
+================================================== -->
+
+<section class="case-architecture" id="arquitectura-informacion">
+
+    <div class="container">
+
+        <div class="case-architecture__content">
+
+            <!-- ==================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="case-architecture__intro">
+
+                <div class="case-architecture__intro-text">
+
+                    <h2 class="case-architecture__title">
+                        Análisis de la<br>
+                        Arquitectura<br>
+                        de Información
+                    </h2>
+
+                    <span class="case-architecture__subtitle">
+                        Organización del producto
+                    </span>
+
+                    <p>
+                        La arquitectura de información de Stream Tap fue analizada y
+                        documentada a partir del JTBD, el Desk Research y la auditoría
+                        del flujo actual, con el objetivo de explicar cómo la
+                        organización del producto contribuye a reducir el esfuerzo
+                        cognitivo durante las transmisiones en vivo.
+                    </p>
+
+                </div>
+
+
+                <figure class="case-architecture__visual">
+
+                    <img
+                        src="../../assets/images/shubham-dhage-IlUq1ruyv0Q-unsplash.jpg"
+                        alt="Visualización de la arquitectura de información de Stream Tap">
+
+                </figure>
+
+            </div>
+
+
+            <!-- ==================================================
+                 PRIORIDADES IDENTIFICADAS
+            ================================================== -->
+
+            <div class="case-architecture__priorities">
+
+                <h3 class="case-architecture__section-title">
+                    Prioridades identificadas
+                </h3>
+
+
+                <div class="case-architecture__priority-grid">
+
+                    <article class="case-architecture__priority-card">
+
+                        <h4>
+                            Priorizar el acceso a
+                            Conectar a OBS
+                        </h4>
+
+                        <p>
+                            Reducir la baja encontrabilidad del flujo de conexión
+                            y facilitar el inicio de la interacción con el producto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="case-architecture__priority-card">
+
+                        <h4>
+                            Organizar mediante
+                            nombres y categorías
+                        </h4>
+
+                        <p>
+                            Favorecer el reconocimiento visual sobre la memoria y
+                            facilitar la localización de controles.
+                        </p>
+
+                    </article>
+
+
+                    <article class="case-architecture__priority-card">
+
+                        <h4>
+                            Agrupar acciones de
+                            edición
+                        </h4>
+
+                        <p>
+                            Mantener una estructura consistente que facilite el
+                            aprendizaje y reduzca la complejidad de la interfaz.
+                        </p>
+
+                    </article>
+
+
+                    <article class="case-architecture__priority-card">
+
+                        <h4>
+                            Separar la
+                            configuración general
+                        </h4>
+
+                        <p>
+                            Evitar que tareas de uso poco frecuente interfieran
+                            con las acciones críticas durante la transmisión.
+                        </p>
+
+                    </article>
+
+
+                    <article class="case-architecture__priority-card">
+
+                        <h4>
+                            Centralizar Escenas
+                            <br>&amp; Atajos
+                        </h4>
+
+                        <p>
+                            Disminuir el tiempo necesario para acceder a las
+                            funciones utilizadas con mayor frecuencia durante
+                            una transmisión.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 ARQUITECTURA DEL PRODUCTO - MAP
+            ================================================== -->
+
+            <div class="case-architecture__map">
+
+                <h3 class="case-architecture__section-title">
+                    Arquitectura del producto
+                </h3>
+
+
+                <!-- ARBOL -->
+
+
+                <div class="case-architecture__tree">
+
+    <!-- NIVEL 01: Inicio -->
+    <div class="case-architecture__level case-architecture__level--root">
+        <div class="case-architecture__node case-architecture__node--root">
+            Inicio
+        </div>
+    </div>
+
+    <!-- NIVEL 02: Ramas Principales -->
+    <div class="case-architecture__branches">
+
+        <!-- CONECTAR A OBS -->
+        <div class="case-architecture__branch">
+            <div class="case-architecture__node case-architecture__node--main">
+                Conectar a OBS
+            </div>
+            <div class="case-architecture__children">
+                <div class="case-architecture__item"><div class="case-architecture__node">Conexión Manual</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Estado de conexión</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Guía de conexión</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Código QR</div></div>
+            </div>
+        </div>
+
+        <!-- PANEL PRINCIPAL -->
+        <div class="case-architecture__branch">
+            <div class="case-architecture__node case-architecture__node--main">
+                Panel Principal
+            </div>
+            <div class="case-architecture__sub-branches">
+                <!-- Sub-rama: Escenas -->
+                <div class="case-architecture__branch-vertical">
+                    <div class="case-architecture__children-vertical">
+                        <div class="case-architecture__node">Escenas</div>
+                        <div class="case-architecture__node">Visualizar</div>
+                        <div class="case-architecture__node">Editar nombre</div>
+                        <div class="case-architecture__node">Cambiar color</div>
+                        <div class="case-architecture__node">Eliminar</div>
+                    </div>
+                </div>
+                <!-- Sub-rama: Atajos -->
+                <div class="case-architecture__branch-vertical-vertical">
+                    <div class="case-architecture__children-vertical">
+                        <div class="case-architecture__node">Atajos</div>
+                        <div class="case-architecture__node">Crear</div>
+                        <div class="case-architecture__node">Editar</div>
+                        <div class="case-architecture__node">Categorías</div>
+                        <div class="case-architecture__node">Personalizar</div>
+                        <div class="case-architecture__node">Eliminar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFIGURACIÓN -->
+        <div class="case-architecture__branch">
+            <div class="case-architecture__node case-architecture__node--main">
+                Configuración
+            </div>
+            <div class="case-architecture__children case-architecture__children--right">
+                <div class="case-architecture__item"><div class="case-architecture__node">General</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Idioma</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Tema</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Ayuda</div></div>
+                <div class="case-architecture__item"><div class="case-architecture__node">Atajo global</div></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+            </div>
+
+            
+
+            <!-- ==================================================
+                 RELACIÓN ENTRE HALLAZGOS Y DECISIONES
+            ================================================== -->
+
+            <div class="case-architecture__relationship">
+
+                <div class="case-architecture__relationship-intro">
+
+                    <h3 class="case-architecture__section-title">
+                        Relación entre hallazgos<br>
+                        &amp; decisiones
+                    </h3>
+
+                    <p>
+                        Los hallazgos obtenidos durante la investigación y la auditoría
+                        del flujo actual permiten comprender cómo la organización
+                        funcional de Stream Tap responde a las necesidades identificadas
+                        durante el análisis. La siguiente relación muestra cómo cada
+                        decisión de organización encuentra sustento en la evidencia
+                        recopilada.
+                    </p>
+
+
+                </div>
+
+
+                <div class="case-architecture__relationship-table">
+
+
+                    <div class="case-architecture__relationship-header">
+
+                
+                        <span>
+                            Hallazgo identificado
+                        </span>
+
+
+
+                        <span class="desicion">
+                            Decisión de organización
+                        </span>
+
+
+                        <svg class="circle__borde" width="18" height="18" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+
+
+                        <svg class="diamond" width="18" height="18" viewBox="0 0 24 24">
+                        <polygon points="12,2 22,12 12,22 2,12" fill="#C5E0FC" stroke="currentColor" stroke-width="2" />
+                        </svg>
+
+                    </div>
+
+
+                    <div class="case-architecture__relationship-row">
+
+                        <span>
+                            Dependencia externa para conectar con OBS Studio.
+                        </span>
+
+                        <span>
+                            Priorizar el acceso a Conectar a OBS desde el inicio del flujo.
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-architecture__relationship-row">
+
+                        <span>
+                            Baja encontrabilidad de funciones clave.
+                        </span>
+
+                        <span>
+                            Mantener visibles las acciones principales dentro del panel principal.
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-architecture__relationship-row">
+
+                        <span>
+                            Dependencia del modelo mental externo.
+                        </span>
+
+                        <span>
+                            Agrupar la creación y edición de atajos dentro de un mismo flujo de configuración.
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-architecture__relationship-row">
+
+                        <span>
+                            Necesidad de reconocimiento rápido durante la transmisión.
+                        </span>
+
+                        <span>
+                            Permitir nombres, categorías y colores personalizados para escenas y atajos.
+                        </span>
+
+                    </div>
+
+
+                    <div class="case-architecture__relationship-row">
+
+                        <span>
+                            Operación bajo presión temporal.
+                        </span>
+
+                        <span>
+                            Separar las tareas de configuración de las acciones utilizadas durante la transmisión.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 RELACIÓN CON EL JTBD
+            ================================================== -->
+
+            <div class="case-architecture__jtbd">
+
+                <h3 class="case-architecture__section-title">
+                    Relación con el JTBD
+                </h3>
+
+                <p>
+                    Esta organización busca reducir el esfuerzo necesario para controlar
+                    OBS Studio estructurando las funciones según su frecuencia de uso y
+                    el contexto operativo del streamer. Al priorizar las acciones críticas
+                    y mantener una jerarquía consistente, se facilita la localización de
+                    controles durante las transmisiones en vivo.
+                </p>
+
+                <p>
+                    <strong>
+                        El análisis de la arquitectura de información
+                    </strong>
+                    permitió comprender cómo Stream Tap organiza sus funciones para
+                    responder a las necesidades del streamer durante una transmisión.
+                    A partir de estos hallazgos, el siguiente apartado presenta las
+                    principales oportunidades de evolución identificadas durante el
+                    análisis, orientadas a fortalecer la experiencia del usuario en
+                    futuras iteraciones del producto.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     OPORTUNIDADES DE EVOLUCIÓN
+================================================== -->
+
+<section class="case-opportunities" id="oportunidades-evolucion">
+
+    <div class="container">
+
+        <div class="case-opportunities__content">
+
+
+            <!-- ==================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="case-opportunities__intro">
+
+                <div class="case-opportunities__intro-visual">
+
+                    <img
+                        src="../../assets/images/lacyec-_vz9pFWoNjc-unsplash.jpg"
+                        alt="Oportunidades de evolución de Stream Tap">
+
+                </div>
+
+
+                <div class="case-opportunities__intro-text">
+
+                    <h2 class="case-opportunities__title">
+                        Oportunidades<br>
+                        de evolución
+                    </h2>
+
+                    <span class="case-opportunities__subtitle">
+                        Evolución del producto
+                    </span>
+
+                    <p>
+                        Las siguientes oportunidades no representan un rediseño del
+                        producto, sino posibles líneas de evolución identificadas a
+                        partir de la investigación, la auditoría del flujo actual y el
+                        análisis de la arquitectura de información. Su propósito es
+                        mostrar cómo el análisis realizado puede orientar futuras
+                        decisiones de producto sin alterar la funcionalidad existente.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 OPORTUNIDAD 01
+            ================================================== -->
+
+            <article class="case-opportunity">
+
+                <div class="case-opportunity__visual">
+
+                    <img
+                        src="../../assets/screens/screen_obs_connect.png"
+                        alt="Pantalla actual de Stream Tap para conectar a OBS">
+
+                    <span>
+                        Pantalla actual
+                    </span>
+
+                </div>
+
+
+                <div class="case-opportunity__text">
+
+                    <span class="case-opportunity__number">
+                        Oportunidad | 01
+                    </span>
+
+                    <h3>
+                        Priorizar el acceso a Conectar a OBS
+                    </h3>
+
+                    <p>
+                        El análisis del flujo actual permitió identificar que la conexión con OBS
+                        Studio constituye el punto de entrada al producto. Reforzar la jerarquía
+                        visual de esta acción facilitaría su reconocimiento durante la primera
+                        interacción y reduciría el tiempo necesario para iniciar el flujo principal.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 OPORTUNIDAD 02
+            ================================================== -->
+
+            <article class="case-opportunity">
+
+                <div class="case-opportunity__visual">
+
+                    <img
+                        src="../../assets/screens/screen_key_actions.png"
+                        alt="Pantalla actual de Stream Tap con las acciones principales">
+
+                    <span>
+                        Pantalla actual
+                    </span>
+
+                </div>
+
+
+                <div class="case-opportunity__text">
+
+                    <span class="case-opportunity__number">
+                        Oportunidad | 02
+                    </span>
+
+                    <h3>
+                        Reforzar la jerarquía de las acciones principales
+                    </h3>
+
+                    <p>
+                        Las funciones utilizadas con mayor frecuencia durante una transmisión
+                        constituyen el núcleo operativo del producto. Reforzar su protagonismo
+                        visual facilitaría su reconocimiento y reduciría el tiempo necesario para
+                        ejecutar acciones críticas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 OPORTUNIDAD 03
+            ================================================== -->
+
+            <article class="case-opportunity">
+
+                <div class="case-opportunity__visual">
+
+                    <img
+                        src="../../assets/screens/screen_edit_shortcut.png"
+                        alt="Pantalla actual de Stream Tap para configuración de atajos">
+
+                    <span>
+                        Pantalla actual
+                    </span>
+
+                </div>
+
+
+                <div class="case-opportunity__text">
+
+                    <span class="case-opportunity__number">
+                        Oportunidad | 03
+                    </span>
+
+                    <h3>
+                        Agrupar las tareas de configuración de atajos
+                    </h3>
+
+                    <p>
+                        Centralizar las acciones relacionadas con la creación y edición de atajos
+                        favorecería una estructura más consistente y reduciría la necesidad de
+                        alternar entre distintas opciones durante la configuración.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 OPORTUNIDAD 04
+            ================================================== -->
+
+            <article class="case-opportunity">
+
+                <div class="case-opportunity__visual">
+
+                    <img
+                        src="../../assets/screens/screen_edit_scenes_color.png"
+                        alt="Pantalla actual de Stream Tap para personalización">
+
+                    <span>
+                        Pantalla actual
+                    </span>
+
+                </div>
+
+
+                <div class="case-opportunity__text">
+
+                    <span class="case-opportunity__number">
+                        Oportunidad | 04
+                    </span>
+
+                    <h3>
+                        Potenciar el reconocimiento visual
+                    </h3>
+
+                    <p>
+                        La personalización de nombres, categorías y colores constituye un
+                        mecanismo de reconocimiento visual que facilita localizar acciones durante
+                        escenarios de alta demanda cognitiva.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 OPORTUNIDAD 05
+            ================================================== -->
+
+            <article class="case-opportunity">
+
+                <div class="case-opportunity__visual">
+
+                    <img
+                        src="../../assets/screens/screen_configurations.png"
+                        alt="Pantalla actual de Stream Tap para configuración">
+
+                    <span>
+                        Pantalla actual
+                    </span>
+
+                </div>
+
+
+                <div class="case-opportunity__text">
+
+                    <span class="case-opportunity__number">
+                        Oportunidad | 05
+                    </span>
+
+                    <h3>
+                        Diferenciar configuración y operación
+                    </h3>
+
+                    <p>
+                        Diferenciar visualmente las tareas de configuración de las acciones
+                        utilizadas durante la transmisión contribuiría a reducir la carga visual y
+                        mantener el foco en las tareas principales del usuario.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 CIERRE
+            ================================================== -->
+
+            <div class="case-opportunities__caption">
+
+                <p>
+                    <span class="average-weight">Las oportunidades identificadas no representan un rediseño de Stream Tap,</span>
+                    sino posibles líneas de evolución fundamentadas en la investigación, la
+                    auditoría del flujo actual y el análisis de la arquitectura de información.
+                    Cada una responde a necesidades observadas durante el estudio y plantea cómo
+                    el producto podría fortalecerse en futuras iteraciones sin perder el enfoque
+                    que actualmente resuelve para los streamers.
+                </p>
+
+                <p>
+                    Como toda oportunidad de evolución requiere ser validada antes de
+                    implementarse, el siguiente apartado define un plan de evaluación basado en
+                    el framework HEART para establecer cómo podrían medirse estas propuestas en
+                    futuras iteraciones del producto.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+     PLAN DE EVALUACIÓN
+================================================== -->
+
+<section class="case-evaluation" id="plan-evaluacion">
+
+    <div class="container">
+
+        <div class="case-evaluation__content">
+
+
+            <!-- ==================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="case-evaluation__intro">
+
+                <div class="case-evaluation__intro-text">
+
+                    <h2 class="case-evaluation__title">
+                        Plan de evaluación
+                    </h2>
+
+                    <span class="case-evaluation__subtitle">
+                        Framework HEART
+                    </span>
+
+                    <p>
+                        Antes de implementar cualquier oportunidad de evolución, es necesario
+                        definir cómo evaluar su impacto sobre la experiencia del usuario. Para ello,
+                        se estableció un plan de evaluación basado en el framework HEART,
+                        seleccionando métricas orientadas a las tareas más críticas que realizan
+                        los streamers dentro de Stream Tap.
+                    </p>
+
+                    <p>
+                        Este plan no presenta resultados medidos, sino una propuesta de evaluación
+                        que serviría como referencia para validar futuras iteraciones del producto.
+                    </p>
+
+                </div>
+
+
+                <div class="case-evaluation__intro-visual">
+
+                    <img
+                        src="../../assets/images/blackcreek-corporate-0QQi6uToKa0-unsplash.jpg"
+                        alt="Plan de evaluación">
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 HEART TABLE
+            ================================================== -->
+
+            <div class="case-evaluation__table">
+
+                <div class="case-evaluation__table-header">
+
+                    <div class="case-evaluation__table-heading">
+
+                        <span class="case-evaluation__marker"></span>
+
+                        Objetivo (HEART)
+
+                    </div>
+
+
+                    <div class="case-evaluation__table-heading">
+
+                        <span class="case-evaluation__marker case-evaluation__marker--diamond"></span>
+
+                        Tarea crítica
+
+                    </div>
+
+
+                    <div class="case-evaluation__table-heading">
+
+                        <span class="case-evaluation__marker case-evaluation__marker--triangle"></span>
+
+                        Indicador propuesto
+
+                    </div>
+
+                </div>
+
+
+                <div class="case-evaluation__table-row">
+
+                    <div>
+                        Task Success
+                    </div>
+
+                    <div>
+                        Conectar con OBS Studio
+                    </div>
+
+                    <div>
+                        Tiempo necesario para establecer una conexión exitosa.
+                    </div>
+
+                </div>
+
+
+                <div class="case-evaluation__table-row">
+
+                    <div>
+                        Task Success
+                    </div>
+
+                    <div>
+                        Cambiar escenas
+                    </div>
+
+                    <div>
+                        Tiempo promedio para cambiar de escena durante una transmisión.
+                    </div>
+
+                </div>
+
+
+                <div class="case-evaluation__table-row">
+
+                    <div>
+                        Task Success
+                    </div>
+
+                    <div>
+                        Ejecutar un atajo
+                    </div>
+
+                    <div>
+                        Tasa de éxito al ejecutar un shortcut sin errores.
+                    </div>
+
+                </div>
+
+
+                <div class="case-evaluation__table-row">
+
+                    <div>
+                        Task Success
+                    </div>
+
+                    <div>
+                        Configurar un atajo
+                    </div>
+
+                    <div>
+                        Tiempo necesario para crear y guardar un nuevo shortcut.
+                    </div>
+
+                </div>
+
+
+                <div class="case-evaluation__table-row">
+
+                    <div>
+                        Task Success
+                    </div>
+
+                    <div>
+                        Localizar funciones principales
+                    </div>
+
+                    <div>
+                        Número de errores o dudas durante la navegación inicial.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 WHY TASK SUCCESS
+            ================================================== -->
+
+            <div class="case-evaluation__why">
+
+                <h3 class="case-evaluation__why-title">
+                    ¿Por qué <em>Task Success?</em>
+                </h3>
+
+                <p>
+                    Debido a que Stream Tap ya se encuentra publicado y este análisis se realizó
+                    de manera retrospectiva, el enfoque se centró en Task Success, al ser la
+                    dimensión del framework HEART que permite evaluar de forma objetiva la
+                    eficiencia y facilidad con la que los usuarios completan las tareas principales
+                    del producto durante una transmisión.
+                </p>
+
+
+                <div class="case-evaluation__caption">
+
+                    <p>
+                        Definir criterios de evaluación antes de implementar cambios permite que
+                        las futuras decisiones de producto se fundamenten en evidencia y no
+                        únicamente en percepciones de diseño. Este plan establece una base para
+                        medir objetivamente el impacto de las oportunidades identificadas y
+                        orientar la evolución de Stream Tap en futuras iteraciones.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PLAN DE VALIDACIÓN
+================================================== -->
+
+<section class="case-validation" id="plan-validacion">
+
+    <div class="container">
+
+        <div class="case-validation__content">
+
+
+            <!-- ==================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="case-validation__intro">
+
+                <div class="case-validation__visual">
+
+                    <img
+                        src="../../assets/images/jakub-zerdzicki-fXlL5I0IvK0-unsplash.jpg"
+                        alt="Prueba de validación de Stream Tap">
+
+                </div>
+
+
+                <div class="case-validation__text">
+
+                    <h2 class="case-validation__title">
+                        Plan de validación
+                    </h2>
+
+                    <span class="case-validation__subtitle">
+                        Prueba Think Aloud
+                    </span>
+
+                    <p>
+                        Una vez definidos los criterios de evaluación mediante el
+                        framework HEART, el siguiente paso consiste en establecer
+                        cómo recopilar la información necesaria para validar las
+                        oportunidades identificadas. Para ello se propone una prueba
+                        de usabilidad utilizando la metodología Think Aloud,
+                        permitiendo observar el comportamiento del usuario mientras
+                        ejecuta las tareas principales dentro de Stream Tap.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 OBJETIVO / ESCENARIO
+            ================================================== -->
+
+            <div class="case-validation__columns">
+
+                <div class="case-validation__block">
+
+                    <h3>
+                        Objetivo
+                    </h3>
+
+                    <p class="case-validation__objective">
+                        Validar si las oportunidades de evolución identificadas
+                        durante el análisis contribuyen a mejorar la facilidad
+                        con la que los usuarios completan las tareas principales
+                        de Stream Tap durante una transmisión en vivo.
+                    </p>
+
+                </div>
+
+
+                <div class="case-validation__block">
+
+                    <h3>
+                        Escenario
+                    </h3>
+
+                    <p class="case-validation__stage">
+                        La prueba estaría dirigida a usuarios con experiencia
+                        utilizando OBS Studio para la creación de contenido en vivo.
+                        Durante la sesión se les solicitaría completar las tareas
+                        principales dentro de Stream Tap mientras verbalizan sus
+                        pensamientos, permitiendo observar cómo interactúan con
+                        la interfaz durante el flujo de uso.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 TAREAS / CRITERIOS
+            ================================================== -->
+
+            <div class="case-validation__columns case-validation__columns--tasks">
+
+                <div class="case-validation__block">
+
+                    <h3>
+                        Tareas
+                    </h3>
+
+
+                    <div class="case-validation__task">
+
+                        <h4>
+                            01 | Establecer conexión con OBS Studio
+                        </h4>
+
+                        <p>
+                            Verificar si el usuario identifica fácilmente el
+                            flujo inicial de conexión.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-validation__task">
+
+                        <h4>
+                            02 | Cambiar una escena
+                        </h4>
+
+                        <p>
+                            Observar la rapidez con la que localiza y ejecuta
+                            la acción durante una transmisión.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-validation__task">
+
+                        <h4>
+                            03 | Ejecutar un atajo
+                        </h4>
+
+                        <p>
+                            Comprobar si el usuario reconoce correctamente los
+                            shortcuts y los utiliza sin cometer errores.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-validation__task">
+
+                        <h4>
+                            04 | Crear un nuevo atajo
+                        </h4>
+
+                        <p>
+                            Evaluar la facilidad para configurar una acción
+                            personalizada.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="case-validation__block">
+
+                    <h3>
+                        Criterios de observación
+                    </h3>
+
+                    <ul class="case-validation__criteria">
+
+                        <li>
+                            Tiempo necesario para completar cada tarea.
+                        </li>
+
+                        <li>
+                            Dudas expresadas durante la interacción.
+                        </li>
+
+                        <li>
+                            Errores de navegación.
+                        </li>
+
+                        <li>
+                            Confusión respecto a nombres o funciones.
+                        </li>
+
+                        <li>
+                            Comentarios espontáneos sobre la experiencia.
+                        </li>
+
+                        <li>
+                            Comportamientos inesperados durante el uso.
+                        </li>
+
+                    </ul>
+
+
+                    <div class="case-validation__caption">
+
+                        <p>
+                            Este plan de validación complementa el análisis realizado
+                            al establecer un método para observar el comportamiento
+                            real de los usuarios antes de implementar cambios en el
+                            producto. <br> De esta manera, las futuras decisiones de diseño
+                            podrían fundamentarse tanto en criterios de evaluación
+                            como en evidencia cualitativa obtenida mediante pruebas
+                            de usabilidad.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     APRENDIZAJES DEL PROYECTO
+================================================== -->
+
+<section class="case-learnings" id="aprendizajes-proyecto">
+
+    <div class="container">
+
+        <div class="case-learnings__content">
+
+            <!-- ==================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="case-learnings__intro">
+
+                <div class="case-learnings__text">
+
+                    <h2 class="case-learnings__title">
+                        Aprendizajes<br>
+                        del proyecto
+                    </h2>
+
+                    <span class="case-learnings__subtitle">
+                        Reflexión profesional
+                    </span>
+
+                    <p>
+                        Analizar Stream Tap desde una perspectiva de UX y Product
+                        Design permitió ir más allá de evaluar una interfaz. El proceso
+                        consistió en comprender el problema que resuelve el producto,
+                        identificar las decisiones que sustentan su funcionamiento y
+                        establecer una base metodológica para orientar su evolución
+                        mediante investigación, evaluación y validación.
+                    </p>
+
+                </div>
+
+
+                <div class="case-learnings__visual">
+
+                    <img
+                        src="../../assets/images/benjamin-deyoung-1IZSAQx4BaM-unsplash.jpg"
+                        alt="Aprendizajes del proyecto">
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 LEARNINGS CARDS
+            ================================================== -->
+
+            <div class="case-learnings__cards">
+
+                <article class="case-learnings__card">
+
+                    <h3>
+                        La evidencia cambia lo que crees que es un problema
+                    </h3>
+
+                    <p>
+                        Antes de recopilar las citas de la comunidad, 
+                        mis hipótesis sobre las fricciones de Stream Tap partían 
+                        solo de mi criterio como diseñador. Al incorporar evidencia 
+                        real de foros de OBS y Reddit, pude confirmar cuáles fricciones 
+                        realmente vivían los streamers y esto me permitió priorizar las 
+                        oportunidades de evolución con mayor precisión, en lugar de basarme 
+                        únicamente en intuición de diseño.
+                    </p>
+
+                </article>
+
+
+                <article class="case-learnings__card">
+
+                    <h3>
+                        Entender el JTBD antes de tocar una pantalla
+                    </h3>
+
+                    <p>
+                        Definir el Job to Be Done y el Point of View 
+                        antes de auditar el flujo actual cambió el enfoque 
+                        del análisis: en lugar de evaluar si cada pantalla 
+                        se veía bien, evalué si cada decisión reducía el esfuerzo 
+                        cognitivo del streamer durante una transmisión en vivo. 
+                        Esa base es la que sostiene por qué prioricé ciertas fricciones 
+                        sobre otras a lo largo de todo el case study.
+                    </p>
+
+                </article>
+
+
+                <article class="case-learnings__card">
+
+                    <h3>
+                        Proponer una mejora no es suficiente sin un plan para validarla
+                    </h3>
+
+                    <p>
+                        Definir el framework HEART y una prueba Think Aloud antes de 
+                        rediseñar cualquier pantalla me obligó a pensar cómo se mediría 
+                        el éxito de cada oportunidad de evolución, no solo cómo se vería. 
+                        Dado que Stream Tap ya está publicado y este análisis es retrospectivo, 
+                        elegí enfocarme en Task Success a propósito, no porque el análisis quedara incompleto.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- ==================================================
+                 FINAL QUOTE
+            ================================================== -->
+
+            <div class="case-learnings__quote">
+
+                <p>
+                    Este proyecto representó la oportunidad de aplicar, 
+                    por primera vez de forma metodológica, una perspectiva de UX y 
+                    Product Design sobre un producto en cuyo desarrollo original 
+                    participé como diseñador UI, aportando en la jerarquía visual y 
+                    el sistema de color de la interfaz. Documentar el problema, 
+                    estructurar la investigación, justificar decisiones y plantear 
+                    mecanismos de evaluación y validación me permitió consolidar una 
+                    forma de trabajo basada en evidencia, pensamiento crítico y mejora 
+                    continua. Más allá del producto, este proceso fortaleció mi capacidad 
+                    para abordar desafíos de diseño con una visión integral de UX & Product Design.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+     <footer class="footer">
+
+    <div class="container">
+
+        <div class="footer__top">
+
+            <div class="footer__left">
+
+                <img
+                    src="../../assets/icons/logo-footer.svg"
+                    alt="Giovanny Mena"
+                    class="footer__logo">
+
+                <p class="footer__description">
+                    ¿Tienes un proyecto en mente?<br>
+                    Hablemos y hagámoslo realidad.
+                </p>
+
+                <a href="https://wa.me/593960080117?text=Buen%20d%C3%ADa%2C%20estoy%20evaluando%20servicios%20de%20dise%C3%B1o%20gr%C3%A1fico%20y%20UI%20para%20un%20proyecto.%20Agradecer%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20y%20una%20posible%20cotizaci%C3%B3n." class="footer__button">
+                    Contáctame
+                </a>
+
+            </div>
+
+            <div class="footer__right">
+
+                <div class="footer__nav">
+
+                    <h4>Navegación</h4>
+
+                    <a href="../../index.html">Inicio</a>
+
+                    <a href="../../#projects">Proyectos</a>
+
+                    <a href="../../../about/index.html">Conoce mi trayectoria</a>
+
+                </div>
+
+                <div class="footer__social">
+
+                    <h4>Social</h4>
+
+                    <a href="https://www.behance.net/GiovannyMenaD">
+                        <img src="../../assets/icons/behance.svg" alt="Behance">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/giovanny-mena-d">
+                        <img src="../../assets/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+
+                    <a href="mailto:giovannymena.design@gmail.com?subject=Solicitud%20de%20información%20sobre%20servicios%20de%20diseño" >
+                        <img src="../../assets/icons/gmail.svg" alt="Gmail">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer__copyright">
+
+        <div class="container">
+
+            <p>© 2026 Giovanny Mena</p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="../../js/navigation.js"></script>
+    <script src="./js/case-study.js"></script>
+
+    </body>
+    </html>

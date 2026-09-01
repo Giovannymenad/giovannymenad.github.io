@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información</title>
+  <style>
+
+    /* Bloqueo de texto por CSS*/
+
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /*CSS*/
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:"IBM Plex Sans",sans-serif;
+      background-color: #0B0B0B; /* Fondo oscuro que resalta el color azul de las partículas */
+      color: #FAFAFA;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; /* Evita barras de desplazamiento */
+      position: relative;
+    }
+
+    /* Canvas de partículas en el fondo */
+    #particles-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Fondo */
+      pointer-events: auto; /* Permite interactuar con el mouse */
+    }
+
+    /* Contenedor o tarjeta de mensaje superpuesta */
+    .card {
+      position: relative;
+      z-index: 2; /* Superpuesto por encima de las partículas */
+      background: transparent; /* Fondo semitransparente */
+      backdrop-filter: blur(12px); /* Efecto de desenfoque del fondo */
+      border: 1px solid rgba(112, 112, 112, 0.2);
+      max-width: 480px;
+      width: 90%;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 16px;
+      color: #FAFAFA;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #BDBDBD;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;   
+      padding: 18px 24px;
+      width: 418px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      background-color: #78B8F8; /* Mismo azul base que la configuración de partículas */
+      color: #04294D;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #ECF5FE;
+    }
+
+    .badge-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: rgba(120, 184, 248, 0.1);
+      border: 1px solid rgba(120, 184, 248, 0.4);
+      border-radius: 50%;
+      margin-bottom: 24px;
+    }
+
+    .badge-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: #78b8f8;
+    }
+
+    .info{
+        text-align: start;
+    }
+
+    /*========================
+    MEDIA QUERIES*
+    =========================*/
+    @media (max-width: 1024px) {
+
+    .card {
+      max-width: 400px;  
+    }
+
+    .btn {
+      width: 338px;
+    }
+  
+}
+
+@media (max-width: 425px){
+
+    .card {
+       padding: 30px 30px;
+    }
+
+    .btn{
+        width: 320px;
+    }
+}
+
+
+ @media (max-width: 375px) {
+
+    .card {
+      max-width: 343px;
+    padding: 30px 30px; 
+    }
+
+    .btn {
+      width: 275px;
+    }
+  
+}
+
+@media (max-width: 320px){
+
+    .card {
+      max-width: 288px;
+      padding: 20px 20px;
+      height: 490px; 
+    }
+
+    h1{
+        margin-bottom: 12px;
+    }
+
+    p{
+        margin-bottom: 16px;
+    }
+
+    .btn {
+      width: 246px;
+    }
+  
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="card">
+    <!--<div class="icon">⚠️</div>-->
+    <div class="badge-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+      </svg>
+    </div>
+    <div class="info">
+    <h1>Proyecto protegido bajo Acuerdo de Confidencialidad</h1>
+    <p>Como Diseñador de Producto, priorizo la privacidad y la protección intelectual de mis clientes para resguardar su innovación, ventaja competitiva y la propiedad del proyecto.</p>
+    <a href="../../#projects" class="btn">Ir a proyectos</a>
+    </div>
+  </div>
+
+  <script src="particleinformative.js"></script>
+
+  <!-- bloqueo de texto por JS-->
+
+  <script>
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+    document.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S'].includes(e.key)) {
+        e.preventDefault();
+      }
+    });
+    document.addEventListener('copy', (e) => e.preventDefault());
+  </script>
+
+
+</body>
+</html>
