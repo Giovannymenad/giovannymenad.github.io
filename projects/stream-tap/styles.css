@@ -10684,7 +10684,7 @@ PROBLEM
 
     .case-problem__caption::after{
 
-        right:274px;
+        right:20px;
 
         bottom:-8px;
 
@@ -11127,7 +11127,7 @@ INVESTIGACION Y HALLAZGOS
 
     .case-research__conclusion::after{
 
-        right:264px;
+        right:266px;
 
         bottom:-8px;
 
@@ -11234,18 +11234,19 @@ MATRIZ IMPACTO VS ESFUERZO
 
         line-height:18px;
 
+        right: 165px;
+
     }
 
 
     .case-priority__axis-x{
 
-        right:20px;
-
+      
         font-size:12px;
 
         line-height:18px;
 
-        top:144px;
+        top:138px;
 
     }
 
@@ -11449,7 +11450,7 @@ MATRIZ IMPACTO VS ESFUERZO
 
     .case-priority__caption::after{
 
-        right:276px;
+        right:8px;
 
         bottom:-8px;
 
@@ -12799,7 +12800,7 @@ APRENDIZAJES
 
         font-size:34px;
 
-        right:274px;
+        right:276px;
 
         bottom:-8px;
 
