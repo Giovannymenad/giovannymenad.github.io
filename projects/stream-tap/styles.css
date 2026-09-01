@@ -10337,6 +10337,2603 @@ MOBILE XL
 @media (max-width:480px){
 
 
+    /*==================================================
+HERO
+==================================================*/
+
+
+    .case-hero{
+
+        padding-top:48px;
+        padding-bottom:72px;
+
+    }
+
+
+    /*==================================================
+    CONTENT
+    ==================================================*/
+
+    .case-hero__content{
+
+        width:100%;
+
+        max-width:none;
+
+    }
+
+
+    /*==================================================
+    TITLE
+    ==================================================*/
+
+    .case-hero__title{
+
+        font-size:3.625rem;
+
+        line-height:74px;
+
+        letter-spacing:-.01em;
+
+    }
+
+
+    /*==================================================
+    DESCRIPTION
+    ==================================================*/
+
+    .case-hero__description{
+
+        margin-top:16px;
+
+    }
+
+
+    /*==================================================
+    GOOGLE PLAY
+    ==================================================*/
+
+    .case-hero__google-play{
+
+        flex-wrap:wrap;
+
+        gap:4px 6px;
+
+        margin-top:36px;
+
+        padding-bottom:32px;
+
+    }
+
+
+    .case-hero__google-play-label,
+    .case-hero__google-play-link{
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    /*==================================================
+    TAGS
+    ==================================================*/
+
+    .case-hero__tags{
+
+        gap:16px;
+
+        margin-top:32px;
+
+    }
+
+
+    .case-hero__tags li{
+
+        min-height:30px;
+
+        padding:12px 16px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================
+    VIDEO
+    ==================================================*/
+
+    .case-hero__visual{
+
+        margin-top:48px;
+
+    }
+
+
+    .case-hero__visual video{
+
+        width:100%;
+
+        max-width:360px;
+
+        height:auto;
+
+    }
+
+
+    /*==================================================
+    INFO
+    ==================================================*/
+
+    .case-hero__info{
+
+        padding-top:48px;
+
+    }
+
+
+    .case-hero__product{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================
+    CONTRIBUTION
+    ==================================================*/
+
+    .case-hero__contribution{
+
+
+        margin-top:40px;
+
+    }
+
+
+    .case-hero__contribution-title{
+
+        margin-bottom:20px;
+
+        font-size:15px;
+
+        line-height:22px;
+
+    }
+
+
+    .case-hero__contribution-role{
+
+        margin:0;
+
+        font-size:15px;
+
+        line-height:22px;
+
+    }
+
+
+    .case-hero__developer{
+
+        margin-top:16px;
+
+        font-size:16px;
+
+        line-height:23px;
+
+    }
+
+
+    .case-hero__developer-name{
+
+        margin-top:4px;
+
+        font-size:16px;
+
+        line-height:23px;
+
+    }
+
+
+/*==================================================
+PROBLEM
+==================================================*/
+
+
+    .case-problem__content{
+
+        max-width:none;
+
+        padding-top:64px;
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE LINES
+    ==================================================*/
+
+    .case-problem__content::before{
+
+        left:55%;
+
+        width:52%;
+
+    }
+
+
+    .case-problem__content::after{
+
+        left:-27px;
+
+        width:60%;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE DOTS
+    ==================================================*/
+
+    .case-problem__content .case-problem__visual::before{
+
+        left:calc(55% - 2px);
+
+    }
+
+
+    .case-problem__content .case-problem__visual::after{
+
+        left:calc(55% - 8px);
+
+    }
+
+
+    /*==================================================
+    TITLE
+    ==================================================*/
+
+    .case-problem__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-problem__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    /*==================================================
+    TEXT
+    ==================================================*/
+
+    .case-problem__text p{
+
+        margin-top:20px;
+
+        font-size:16px;
+
+        line-height:25px;
+
+    }
+
+
+    /*==================================================
+    VISUAL
+    ==================================================*/
+
+    .case-problem__visual{
+
+        margin-top:44px;
+
+    }
+
+
+    .case-problem__visual img{
+
+        aspect-ratio:16 / 10;
+
+        border-radius:16px;
+
+    }
+
+
+    /*==================================================
+    CAPTION
+    ==================================================*/
+
+    .case-problem__caption{
+
+        margin-top:24px;
+
+        padding-left:22px;
+
+        padding-right:10px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-problem__caption::before{
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+    .case-problem__caption::after{
+
+        right:274px;
+
+        bottom:-8px;
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+/*==================================================
+COMPRENSION DEL PROBLEMA
+==================================================*/
+
+
+    .case-understanding{
+
+        padding-top:64px;
+
+    }
+
+
+    /*==================================================
+    CONTENT
+    ==================================================*/
+
+    .case-understanding__content{
+
+        max-width:none;
+
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE LINE
+    ==================================================*/
+
+    .case-understanding__content::after{
+
+        left:55%;
+
+        width:52%;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE DOT
+    ==================================================*/
+
+    .case-understanding__text::after{
+
+        left:calc(55% - 2px);
+
+    }
+
+
+    /*==================================================
+    TITLE
+    ==================================================*/
+
+    .case-understanding__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-understanding__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    /*==================================================
+    TEXT
+    ==================================================*/
+
+    .case-understanding__text > p:not(.case-understanding__caption){
+
+        margin-top:24px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================
+    CAPTION
+    ==================================================*/
+
+    .case-understanding__caption{
+
+        margin-top:28px;
+
+        padding-left:22px;
+
+        padding-right:10px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-understanding__caption::before{
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+    .case-understanding__caption::after{
+
+        right:46px;
+
+        bottom:-8px;
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+    /*==================================================
+    CARDS
+    ==================================================*/
+
+    .case-understanding__cards{
+
+        padding-top:40px;
+
+        gap:16px;
+
+    }
+
+
+    .case-understanding__card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+
+    .case-understanding__card h3{
+
+        font-size:16px;
+
+        line-height:23px;
+
+    }
+
+
+    .case-understanding__card p{
+
+        margin-top:12px;
+
+        font-size:14px;
+
+        line-height:21px;
+
+    }
+
+
+  /*==================================================
+INVESTIGACION Y HALLAZGOS
+==================================================*/
+
+
+    .case-research__content{
+
+        max-width:none;
+
+        padding-top:64px;
+
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE LINE
+    ==================================================*/
+
+    .case-research__content::after{
+
+        left:-27px;
+
+        width:60%;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE DOT
+    ==================================================*/
+
+    .case-research__visual::after{
+
+        left:calc(53% - 2px);
+
+    }
+
+
+    /*==================================================
+    TITLE
+    ==================================================*/
+
+    .case-research__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-research__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    /*==================================================
+    INTRO TEXT
+    ==================================================*/
+
+    .case-research__text p{
+
+        margin-top:20px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-research__text p + p{
+
+        margin-top:18px;
+
+    }
+
+
+    /*==================================================
+    VISUAL
+    ==================================================*/
+
+    .case-research__visual{
+
+        margin-top:40px;
+
+    }
+
+
+    .case-research__visual img{
+
+        aspect-ratio:16 / 10;
+
+        border-radius:16px;
+
+    }
+
+
+    /*==================================================
+    FINDINGS
+    ==================================================*/
+
+    .case-research__findings{
+
+        gap:16px;
+
+        margin-top:40px;
+
+    }
+
+
+    .case-research__card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+
+    .case-research__card h3{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-research__card span{
+
+        margin-top:14px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-research__card p{
+
+        margin-top:12px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    /*==================================================
+    COMMUNITY
+    ==================================================*/
+
+    .case-research__community{
+
+        margin-top:64px;
+
+    }
+
+
+    .case-research__community-title{
+
+        font-size:28px;
+
+        line-height:32px;
+
+    }
+
+
+    .case-research__community-grid{
+
+        gap:16px;
+
+        margin-top:32px;
+
+    }
+
+
+    /*==================================================
+    QUOTE CARDS
+    ==================================================*/
+
+    .case-research__quote-card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+
+    .case-research__quote-card h4{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-research__quote-card p{
+
+        margin-top:12px;
+
+        font-size:13px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-research__quote-card strong{
+
+        margin-top:14px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    /*==================================================
+    CONCLUSION
+    ==================================================*/
+
+    .case-research__conclusion{
+
+        margin-top:32px;
+
+        padding-left:22px;
+
+        padding-right:12px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-research__conclusion::before{
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+    .case-research__conclusion::after{
+
+        right:264px;
+
+        bottom:-8px;
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+ /*==================================================
+MATRIZ IMPACTO VS ESFUERZO
+==================================================*/
+
+
+    .case-priority{
+
+        padding-top:64px;
+
+    }
+
+
+    .case-priority__content{
+
+        max-width:none;
+
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================
+    INTRO
+    ==================================================*/
+
+    .case-priority__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-priority__subtitle{
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-priority__description{
+
+        margin-top:20px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-priority__description + .case-priority__description{
+
+        margin-top:18px;
+
+    }
+
+
+    /*==================================================
+    MATRIX
+    ==================================================*/
+
+    .case-priority__matrix{
+
+        width:100%;
+
+        margin-top:65px;
+
+    }
+
+    .case-priority__matrix::before{
+        margin-left: 4px;
+    }
+
+    .case-priority__matrix::after{
+        margin-top: 4px;
+    }
+
+
+
+
+    /*==================================================
+    AXES
+    ==================================================*/
+
+    .case-priority__axis-y{
+
+        top:-22px;
+
+        font-size:12px;
+
+        line-height:18px;
+
+    }
+
+
+    .case-priority__axis-x{
+
+        right:20px;
+
+        font-size:12px;
+
+        line-height:18px;
+
+        top:144px;
+
+    }
+
+
+    /*==================================================
+    QUADRANTS
+    ==================================================*/
+
+    .case-priority__quadrant h3{
+
+        margin-top:8px;
+
+        font-size:11px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-priority__quadrant span{
+
+        margin-top:3px;
+
+        font-size:10px;
+
+        line-height:14px;
+
+    }
+
+
+    .case-priority__quadrant ul{
+
+        margin-top:-8px;
+
+    }
+
+
+    .case-priority__quadrant li{
+
+        padding-left:9px;
+
+        font-size:10px;
+
+        line-height:14px;
+
+    }
+
+
+    .case-priority__quadrant li::before{
+
+        top:5px;
+
+        width:3px;
+
+        height:3px;
+
+    }
+
+
+    .case-priority__quadrant--high-low{
+
+        padding:0 20px 16px 0;
+
+    }
+
+
+    .case-priority__quadrant--high-high{
+
+        padding:0 0 16px 20px;
+
+    }
+
+
+    .case-priority__quadrant--low-low{
+
+        padding:0 20px 6px 0;
+
+    }
+
+
+    .case-priority__quadrant--low-high{
+
+        padding:22px 0 6px 20px;
+
+    }
+
+
+    .priority_implementation{
+
+        margin-top:20px;
+
+    }
+
+
+    .valuable_but_expensive{
+
+        margin-top:34px;
+
+    }
+
+
+    .optional{
+
+        margin-bottom:34px;
+
+    }
+
+
+    .avoid{
+
+        margin-bottom:34px;
+
+    }
+
+
+    /*==================================================
+    PRIORIDADES
+    ==================================================*/
+
+    .case-priority__priorities{
+
+        margin-top:64px;
+
+    }
+
+
+    .case-priority__priorities-title{
+
+        margin-bottom:32px;
+
+        font-size:28px;
+
+        line-height:32px;
+
+    }
+
+
+    .case-priority__cards{
+
+        gap:16px;
+
+    }
+
+
+    .case-priority__card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+
+    .case-priority__card h3{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-priority__card p{
+
+        margin-top:12px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    /*==================================================
+    CAPTION
+    ==================================================*/
+
+    .case-priority__caption{
+
+        margin-top:32px;
+
+        padding-left:22px;
+
+        padding-right:24px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-priority__caption::before{
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+    .case-priority__caption::after{
+
+        right:276px;
+
+        bottom:-8px;
+
+        font-size:34px;
+
+        line-height:28px;
+
+    }
+
+
+    /*==================================================
+    DECORATIVE LINE
+    ==================================================*/
+
+    .case-priority__priorities::after{
+
+        left: -12px;
+        width: 52%;
+        margin-top: 64px;
+
+    }
+
+
+    .case-priority__priorities::before{
+
+        left:calc(55% - 2px);
+
+    }
+
+
+
+/*==================================================*
+AUDITORIA
+*==================================================*/
+
+
+    .case-audit__content{
+
+        max-width:none;
+
+        width:calc(100% - 40px);
+
+        padding-top:64px;
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================*
+    * INTRO
+    *==================================================*/
+
+    .case-audit__intro{
+
+        gap:32px;
+
+        margin-bottom:60px;
+
+    }
+
+
+    .case-audit__intro-visual img{
+
+        height:240px;
+
+        border-radius:18px;
+
+    }
+
+
+    .case-audit__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-audit__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-audit__intro-text > p{
+
+        margin-top:20px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================*
+    * FLOW
+    *==================================================*/
+
+    .case-audit__flow{
+
+        padding-bottom:64px;
+
+        margin-bottom:64px;
+
+    }
+
+
+    .case-audit__flow-header{
+
+        margin-bottom:32px;
+
+    }
+
+
+    .case-audit__flow-header h3{
+
+        font-size:17px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-audit__flow-main{
+
+        gap:40px;
+
+    }
+
+
+    /*==================================================*
+    * JOURNEY
+    *==================================================*/
+
+    .case-audit__step{
+
+        min-height:42px;
+
+        padding:9px 12px;
+
+        border-radius:10px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-audit__step:not(:last-child)::before{
+
+        width:12px;
+
+        height:12px;
+
+        top:90%;
+
+    }
+
+
+    .case-audit__step:not(:last-child)::after{
+
+        width:12px;
+
+        height:50px;
+
+        top:46px;
+
+        
+
+    }
+
+
+
+    /*==================================================*
+    * SCREEN
+    *==================================================*/
+
+    .case-audit__screen{
+
+        width:180px;
+
+    }
+
+
+    .case-audit__screen img{
+
+        max-width:200px;
+
+    }
+
+
+    /*==================================================*
+    * FRICTIONS
+    *==================================================*/
+
+    .case-audit__frictions{
+
+        margin-top:56px;
+
+    }
+
+
+    .case-audit__frictions-header{
+
+        gap:16px;
+
+        margin-bottom:24px;
+
+    }
+
+
+    .case-audit__frictions-header h4{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-audit__legend{
+
+        flex-wrap:wrap;
+
+        gap:8px 12px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-audit__friction{
+
+        padding:20px;
+
+        margin-bottom:16px;
+
+        border-radius:18px;
+
+    }
+
+
+    .case-audit__friction h5{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-audit__friction > span{
+
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-audit__friction > p{
+
+        margin-top:16px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    .case-audit__friction > strong{
+
+        margin-top:14px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-audit__friction ul{
+
+        margin-top:12px;
+
+    }
+
+
+    .case-audit__friction li{
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    /*==================================================*
+    * CAPTION
+    *==================================================*/
+
+    .case-audit__caption{
+
+        margin-top:32px;
+
+        padding:0 20px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+    .case-audit__caption::before{
+        font-size: 34px;
+    }
+
+    .case-audit__caption::after{
+        font-size: 34px;
+        right: 207px;
+        bottom: 16px;
+    }
+
+
+    /*==================================================*
+    * DECORACIÓN
+    *==================================================*/
+
+    .case-audit__content::before{
+
+        left: -48px;
+        width: 68%;
+
+    }
+
+
+    .case-audit__content::after{
+
+        left:53%;
+
+    }
+
+
+
+ /*==================================================*
+ARQUITECTURA DE LA INFORMACION
+*==================================================*/
+
+    .case-architecture__content{
+        padding-top:64px;
+        padding-bottom:64px;
+    }
+
+
+    /*=============================
+       INTRO
+    =============================*/
+
+    .case-architecture__intro{
+        gap:30px;
+        margin-bottom:60px;
+    }
+
+    .case-architecture__title{
+        font-size:38px;
+        line-height:40px;
+    }
+
+    .case-architecture__subtitle{
+        margin-top:12px;
+        font-size:12px;
+    }
+
+    .case-architecture__intro-text > p{
+        margin-top:20px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .case-architecture__visual img{
+        height:300px;
+        border-radius:20px;
+    }
+
+
+    /*=============================
+       SECTION TITLES
+    =============================*/
+
+    .case-architecture__section-title{
+        font-size:28px;
+        line-height:32px;
+        position: sticky;
+        left: 0;
+        z-index: 10;
+    }
+
+
+    /*=============================
+       PRIORIDADES
+    =============================*/
+
+    .case-architecture__priorities{
+        margin-bottom:65px;
+    }
+
+    .case-architecture__priority-grid{
+        grid-template-columns:1fr;
+        margin-top:30px;
+    }
+
+    .case-architecture__priority-card:nth-child(n){
+        min-height:0;
+        height:auto;
+        padding:24px;
+    }
+
+    .case-architecture__priority-card h4{
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .case-architecture__priority-card p{
+        margin-top:12px;
+        font-size:14px;
+        line-height:20px;
+    }
+
+
+    /*=============================
+       MAPA
+    =============================*/
+
+    .case-architecture__map{
+        margin-bottom:70px;
+        overflow-x:auto;
+        margin-right:-30px;
+    }
+
+    .case-architecture__tree{
+        min-width:850px;
+        padding:60px 20px 60px;
+    }
+
+
+    /*=============================
+       RELACIÓN
+    =============================*/
+
+    .case-architecture__relationship{
+        margin-bottom:50px;
+    }
+
+    .case-architecture__relationship-intro p{
+        margin-top:24px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .case-architecture__relationship-table{
+        margin-right:-30px;
+    }
+
+    .case-architecture__relationship-header,
+    .case-architecture__relationship-row{
+        min-width:700px;
+    }
+
+    .case-architecture__relationship-header{
+        column-gap:40px;
+        margin-left:10px;
+    }
+
+    .case-architecture__relationship-header span{
+        font-size:15px;
+        line-height:20px;
+        margin-left:10px;
+    }
+
+    .case-architecture__relationship-row{
+        column-gap:40px;
+        padding:26px 0;
+        margin-left:20px;
+    }
+
+    .case-architecture__relationship-row span{
+        font-size:14px;
+        line-height:21px;
+    }
+
+    .case-architecture__relationship-header .diamond{
+        left:-20px;
+        width:14px;
+        height:14px;
+        top:8px;
+    }
+
+    .case-architecture__relationship-header .circle__borde {
+        position: relative;
+        top: 8px;
+        left: -11px;
+        width: 14px;
+        height: 14px;
+    }
+
+    /*=============================
+       CÍRCULO
+    =============================*/
+
+    .case-architecture__relationship-intro .circle__borde{
+        top:100px;
+        width:16px;
+        height:16px;
+    }
+
+
+    /*=============================
+       JTBD
+    =============================*/
+
+    .case-architecture__jtbd{
+        margin-top:60px;
+    }
+
+    .case-architecture__jtbd p{
+        margin-top:20px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .case-architecture__jtbd p + p{
+        margin-top:22px;
+    }
+
+    .case-architecture__jtbd::before{
+        left:54%;
+    }
+
+    .case-architecture__jtbd::after{
+        width: 53%;
+        left: 55%;
+        margin-top: 64px;
+    }
+
+   
+
+
+/*==================================================*
+OPORTUNIDADES DE EVOLUCION
+*==================================================*/
+
+    .case-opportunities__content{
+        padding-top:64px;
+        padding-bottom:64px;
+    }
+
+
+    /*=============================
+       INTRO
+    =============================*/
+
+    .case-opportunities__intro{
+        gap:40px;
+    }
+
+    .case-opportunities__intro-visual img{
+        height:300px;
+        border-radius:20px;
+    }
+
+    .case-opportunities__title{
+        font-size:38px;
+        line-height:40px;
+    }
+
+    .case-opportunities__subtitle{
+        margin-top:12px;
+        font-size:12px;
+        line-height:16px;
+    }
+
+    .case-opportunities__intro-text > p{
+        margin-top:20px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+
+    /*=============================
+       OPPORTUNITIES
+    =============================*/
+
+    .case-opportunity{
+        grid-template-columns:1fr;
+        gap:40px;
+        padding:65px 0;
+    }
+
+    .case-opportunity__visual{
+        order:1;
+    }
+
+    .case-opportunity__text{
+        order:2;
+        max-width:100%;
+    }
+
+    .case-opportunity__visual img{
+        width:130px;
+        height:290px;
+    }
+
+    .case-opportunity__visual span{
+        margin-top:10px;
+        font-size:11px;
+        line-height:15px;
+    }
+
+    .case-opportunity__number{
+        font-size:17px;
+        line-height:24px;
+    }
+
+    .case-opportunity__text h3{
+        margin-top:16px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .case-opportunity__text p{
+        margin-top:8px;
+        width:100%;
+        font-size:14px;
+        line-height:20px;
+    }
+
+
+    /*=============================
+       DIVISORES
+    =============================*/
+
+    .case-opportunity:not(:last-of-type)::after{
+        left:0;
+        right:0;
+    }
+
+
+    /*=============================
+       CAPTION
+    =============================*/
+
+    .case-opportunities__caption{
+        margin-top:4px;
+        padding-left:22px;
+        padding-right:22px;
+        font-size:14px;
+        line-height:20px;
+    }
+
+    .case-opportunities__caption::before{
+        font-size:34px;
+        line-height:26px;
+    }
+
+    .case-opportunities__caption::after{
+        right:73%;
+        bottom:-8px;
+        font-size:34px;
+        line-height:26px;
+    }
+
+    .case-opportunities__caption p + p{
+        margin-top:20px;
+    }
+
+
+    /*=============================
+       LÍNEA FINAL
+    =============================*/
+
+    .case-opportunities__content::before{
+        left: -26px;
+        width: 60%;
+    }
+
+    .case-opportunities__content::after{
+        left:53%;
+    }
+
+    
+
+
+/*==================================================*
+PLAN DE EVALUACION
+*==================================================*/
+
+    /*==============================
+      CONTENT
+    ==============================*/
+
+    .case-evaluation__content{
+
+        padding-top:64px;
+        padding-bottom:64px;
+
+    }
+
+
+    /*==============================
+      INTRO
+    ==============================*/
+
+    .case-evaluation__intro{
+
+        gap:40px;
+
+    }
+
+
+    .case-evaluation__title{
+
+        font-size:40px;
+
+        line-height:48px;
+
+    }
+
+
+    .case-evaluation__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-evaluation__intro-text p{
+
+        font-size:16px;
+
+        line-height:24px;
+
+        margin-top:20px;
+
+    }
+
+
+    .case-evaluation__intro-text p + p{
+
+        margin-top:18px;
+
+    }
+
+
+    .case-evaluation__intro-visual img{
+
+        height:260px;
+
+        border-radius:20px;
+
+    }
+
+
+    /*==============================
+      TABLE
+    ==============================*/
+
+    .case-evaluation__table{
+
+        margin-top:70px;
+
+        margin-left:0;
+
+        margin-right:0;
+
+    }
+
+
+    .case-evaluation__table-header{
+
+        min-width:680px;
+
+        height:44px;
+
+    }
+
+
+    .case-evaluation__table-heading{
+
+        font-size:14px;
+
+        line-height:20px;
+
+        padding-left:26px;
+
+    }
+
+
+    .case-evaluation__marker{
+
+        left:0;
+
+        top:38px;
+
+        width:10px;
+
+        height:10px;
+
+    }
+
+
+    .case-evaluation__marker--diamond{
+
+        left:-16px;
+
+    }
+
+
+    .case-evaluation__marker--triangle{
+
+        left:-13px;
+
+        top:38px;
+
+        border-top-width:6px;
+
+        border-bottom-width:6px;
+
+        border-left-width:12px;
+
+    }
+
+
+    .case-evaluation__table-row{
+
+        min-width:680px;
+
+        min-height:70px;
+
+    }
+
+
+    .case-evaluation__table-row > div{
+
+        font-size:14px;
+
+        line-height:21px;
+
+        padding:18px 10px 0 26px;
+
+    }
+
+
+    /*==============================
+      WHY
+    ==============================*/
+
+    .case-evaluation__why{
+
+        margin-top:70px;
+
+    }
+
+
+    .case-evaluation__why-title{
+
+        font-size:28px;
+
+        line-height:32px;
+
+    }
+
+
+    .case-evaluation__why > p{
+
+        font-size:16px;
+
+        line-height:24px;
+
+        margin-top:20px;
+
+    }
+
+
+    /*==============================
+      CAPTION
+    ==============================*/
+
+    .case-evaluation__caption{
+
+        margin-top:40px;
+
+        padding-left:24px;
+
+        padding-right:24px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+        font-weight: 400;
+
+    }
+
+
+    .case-evaluation__caption::before{
+
+        font-size:34px;
+
+        left:0;
+
+    }
+
+
+    .case-evaluation__caption::after{
+
+        font-size:34px;
+
+        right:182px;
+
+        bottom:-8px;
+
+    }
+
+
+    /*==============================
+      DECORATIVE LINE
+    ==============================*/
+
+    .case-evaluation__content::after{
+
+        width: 51%;
+        right: -25px;
+
+    }
+
+
+    .case-evaluation__content::before{
+
+        left:55%;
+
+    }
+
+
+
+/*==================================================*
+PLAN DE VALIDACION
+*==================================================*/
+
+    /*==================================================*
+    * CONTENT
+    *==================================================*/
+
+    .case-validation__content{
+
+        padding-top:64px;
+
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================*
+    * INTRO
+    *==================================================*/
+
+    .case-validation__intro{
+
+        row-gap:40px;
+
+    }
+
+
+    .case-validation__visual img{
+
+        height:260px;
+
+        border-radius:20px;
+
+    }
+
+
+    .case-validation__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-validation__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-validation__text > p{
+
+        margin-top:28px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================*
+    * TEXT COLUMNS
+    *==================================================*/
+
+    .case-validation__columns{
+
+        row-gap:60px;
+
+        margin-top:70px;
+
+    }
+
+
+    .case-validation__columns--tasks{
+
+        margin-top:70px;
+
+    }
+
+
+    .case-validation__block h3{
+
+        font-size:28px;
+
+        line-height:32px;
+
+    }
+
+
+    .case-validation__block > p{
+
+        font-size:15px;
+
+        line-height:23px;
+
+    }
+
+
+    .case-validation__objective{
+
+        padding-top:18px;
+
+    }
+
+
+    .case-validation__stage{
+
+        padding-top:18px;
+
+    }
+
+
+    /*==================================================*
+    * TASKS
+    *==================================================*/
+
+    .case-validation__task{
+
+        margin-top:24px;
+
+    }
+
+
+    .case-validation__task + .case-validation__task{
+
+        margin-top:24px;
+
+    }
+
+
+    .case-validation__task h4{
+
+        font-size:17px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-validation__task p{
+
+        margin-top:12px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================*
+    * CRITERIA
+    *==================================================*/
+
+    .case-validation__criteria li{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================*
+    * CAPTION
+    *==================================================*/
+
+    .case-validation__caption{
+
+        margin-top:40px;
+
+        padding-left:24px;
+
+        padding-right:24px;
+
+    }
+
+
+    .case-validation__caption p{
+
+        font-size:14px;
+
+        line-height:20px;
+        font-weight: 400;
+
+    }
+
+
+    .case-validation__caption::before{
+
+        left:0;
+
+        font-size:34px;
+
+        top: -2px;
+
+    }
+
+
+    .case-validation__caption::after{
+
+        right: 116px;
+        font-size: 34px;
+        bottom: -8px;
+
+    }
+
+
+    /*==================================================*
+    * DECORATIVE LINE
+    *==================================================*/
+
+    .case-validation__content::after{
+
+        width: 56%;
+        left: -20px;
+
+    }
+
+
+    .case-validation__content::before{
+
+        left:50%;
+
+    }
+
+
+    
+/*==================================================*
+APRENDIZAJES
+*==================================================*/
+
+    /*==================================================*
+    * CONTENT
+    *==================================================*/
+
+    .case-learnings__content{
+
+        padding-top:64px;
+
+        padding-bottom:64px;
+
+    }
+
+
+    /*==================================================*
+    * INTRO
+    *==================================================*/
+
+    .case-learnings__intro{
+
+        row-gap:40px;
+
+    }
+
+
+    .case-learnings__title{
+
+        font-size:38px;
+
+        line-height:40px;
+
+    }
+
+
+    .case-learnings__subtitle{
+
+        margin-top:12px;
+
+        font-size:12px;
+
+        line-height:16px;
+
+    }
+
+
+    .case-learnings__text p{
+
+        margin-top:20px;
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    /*==================================================*
+    * VISUAL
+    *==================================================*/
+
+    .case-learnings__visual img{
+
+        width:100%;
+
+        height:260px;
+
+        border-radius:20px;
+
+    }
+
+
+    /*==================================================*
+    * CARDS
+    *==================================================*/
+
+    .case-learnings__cards{
+
+        row-gap:16px;
+
+        margin-top:60px;
+
+    }
+
+
+    .case-learnings__card{
+
+        padding:24px;
+
+        border-radius:16px;
+
+    }
+
+
+    .case-learnings__card h3{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+
+    .case-learnings__card p{
+
+        margin-top:12px;
+
+        font-size:14px;
+
+        line-height:20px;
+
+    }
+
+
+    /*==================================================*
+    * FINAL QUOTE
+    *==================================================*/
+
+    .case-learnings__quote{
+
+        margin-top:60px;
+
+        padding-left:24px;
+
+        padding-right:14px;
+
+    }
+
+
+    .case-learnings__quote p{
+
+        font-size:14px;
+
+        line-height:20px;
+
+        font-weight: 400;
+
+    }
+
+
+    .case-learnings__quote::before{
+
+        font-size:34px;
+
+    }
+
+
+    .case-learnings__quote::after{
+
+        font-size:34px;
+
+        right:274px;
+
+        bottom:-8px;
+
+    }
+
+
+    /*======================
+    BOTON FLOTANTE
+    =======================*/
+
+    .case-index-toggle {
+        right: 8%;
+    }
+
+    .case-index.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(9%);
+}
+
+
+    
+
+
+
+/* ==========================
+   FOOTER 425px
+========================== */
+
+.footer .container{
+
+    padding:48px 20px 0;
+
+}
+
+.footer__top{
+
+    gap:48px;
+
+}
+
+.footer__logo{
+
+    width:60px;
+    height:20px;
+
+}
+
+.footer__description{
+
+    font-size:16px;
+
+    line-height:140%;
+
+}
+
+.footer__button{
+
+    width:100%;
+    max-width:100%;
+
+}
+
+.footer__right{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:36px;
+
+}
+
+.footer__nav a{
+
+    font-size:16px;
+
+    margin-bottom:14px;
+
+}
+
+.footer__social{
+
+    display:flex;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.footer__social h4{
+
+    margin-bottom:12px;
+    margin-right:20px;
+
+}
+
+.footer__social a{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+.footer__copyright{
+
+    margin-top:28px;
+
+    padding-bottom:28px;
+
+}
+
+.footer__copyright .container{
+
+    padding:0 20px;
+
+}
+
+.footer__copyright p{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
     .case-index-toggle{
     right:16%;
 }
